@@ -27,10 +27,6 @@ cat('Scanned images of the original printing of this book are available [here]('
 }
 ```
 
-#### Cover {-}
-```{r fig.align='center', echo=FALSE, include=identical(knitr:::pandoc_to(), 'html'), fig.link='https://www.warhornmedia.com'}
-knitr::include_graphics('cover.png', dpi = NA)
-```
 
 # Introduction {-}
 

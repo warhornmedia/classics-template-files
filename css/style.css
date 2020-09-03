@@ -232,7 +232,7 @@ h2 {
 	font-weight: 700;
 	line-height: 1.5em;
 	letter-spacing: .6px;
-	border-left: solid 2px #1aa9ab;
+	border-left: .1em solid #1aa9ab;
 	padding-left: .5em;
 }
 
