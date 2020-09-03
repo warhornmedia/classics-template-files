@@ -27,6 +27,8 @@ cat('Scanned images of the original printing of this book are available [here]('
 }
 ```
 
+#### Cover {-}
+![](cover.png)
 
 # Introduction {-}
 
