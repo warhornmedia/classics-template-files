@@ -1,4 +1,4 @@
-# [A Warhorn Classics Book](https://classics.warhornmedia.com/) {-}
+### [A Warhorn Classics Book](https://classics.warhornmedia.com/) {-}
 
 <center>
 ![](classics-template-files/images/whitelogo.png){ width=50% }
@@ -7,6 +7,8 @@ Republished by Warhorn Classics:
 
 Making classic Christian books available for free online in high quality, readable formats. 
 </center>
+
+The latest version of this book can always be found [here](`r str(rmarkdown::metadata::url)`) in every format we offer. 
 
 #### Downloads {-}
 <a href="https://warhornmedia.github.io/bannerman-sacraments/Bannerman-Sacraments.pdf"><i class="fa fa-file-pdf-o" aria-hidden="true"></i> Download PDF</a>
