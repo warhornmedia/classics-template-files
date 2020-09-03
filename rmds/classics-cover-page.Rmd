@@ -21,12 +21,11 @@ God bless,
 
 —The Warhorn Team
 
-``` {r echo=FALSE, results=asis}
-if (!empty(params$scans)) {
+``` {r echo=FALSE, results='asis'}
+if (!((is.null(params$scans)) || (params$scans == ""))) {
 cat('Scanned images of the original printing of this book are available [here](', params$scans, ').')
 }
 ```
-Original scanned images of this book are available in two places for proofreading or checking for errors: [Archive.org](https://archive.org/details/churchofchristtr02bann/page/n11/mode/2up) and [Google Books](https://www.google.com/books/edition/_/Z_BBAAAAYAAJ?hl=en&gbpv=0).
 
 #### Cover {-}
 ```{r fig.align='center', echo=FALSE, include=identical(knitr:::pandoc_to(), 'html'), fig.link='https://www.warhornmedia.com'}
