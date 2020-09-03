@@ -1,3 +1,5 @@
+# [A Warhorn Classics Book](https://classics.warhornmedia.com/) {-}
+
 <center>
 ![](classics-template-files/images/whitelogo.png){ width=50% }
 
