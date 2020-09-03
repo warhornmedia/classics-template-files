@@ -28,17 +28,17 @@ body {
 ------------------------------------------*/
 
 .book .book-summary .summary li a img {
-	background-image: url("../images/whitelogo.png");
+	background-image: url("../classics-template-files/images/whitelogo.png");
 	background-size: contain;
 }
 
 .book.color-theme-1 .summary li a img {
-	background-image: url("../images/sepialogo.png");
+	background-image: url("../classics-template-files/images/sepialogo.png");
 	background-size: contain;
 }
 
 .book.color-theme-2 .summary li a img {
-	background-image: url("../images/nightlogo.png");
+	background-image: url("../classics-template-files/images/nightlogo.png");
 	background-size: contain;
 }
 
