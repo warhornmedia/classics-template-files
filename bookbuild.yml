@@ -10,6 +10,7 @@ before_script:
   - ls
   - mv classics-template-files/scripts/*.sh .
   - chmod +x ./_build.sh
+  - chmod +x ./_build.sh
   - chmod +x ./_deploy.sh
 
 #  - sudo apt install calibre # install calibre to support mobi file creation
