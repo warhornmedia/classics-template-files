@@ -9,7 +9,7 @@ body {
 }
 
 .book.font-family-0 {
-	font-family: calluna, minion-3, serif;
+	font-family: calluna, serif;
 	font-variant-ligatures: common-ligatures;
   	-moz-font-feature-settings: "liga", "clig";
   	-webkit-font-feature-settings: "liga", "clig";
@@ -17,11 +17,19 @@ body {
 }
 
 .book.font-family-1 {
-	font-family: calluna-sans, minion-3, sans-serif;
+	font-family: calluna-sans, sans-serif;
 	font-variant-ligatures: common-ligatures;
   	-moz-font-feature-settings: "liga", "clig";
   	-webkit-font-feature-settings: "liga", "clig";
   	font-feature-settings: "liga", "clig";
+}
+
+.book.font-family-0 span:lang(el) {
+	font-family: minion-3, serif;
+}
+
+.book.font-family-1 span:lang(el) {
+	font-family: minion-3, sans-serif;
 }
 
 /*LOGO IMAGES FOR COLOR THEMES
