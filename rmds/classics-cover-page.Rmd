@@ -23,12 +23,16 @@ God bless,
 
 ``` {r echo=FALSE, results='asis'}
 if (!((is.null(params$scans)) || (params$scans == ""))) {
-cat('Scanned images of the original printing of this book are available [here](', params$scans, ').')
+	cat('Scanned images of the original printing of this book are available [here](', params$scans, ').')
 }
-```
 
-#### Cover {-}
-![](cover.png)
+if (!((is.null(rmarkdown::metadata$cover-image)) || (rmarkdown::metadata$cover-image == ""))) {
+	if (file.exists(str(rmarkdown::metadata$cover-image))) {
+		cat('#### Cover {-} \n![](rmarkdown::metadata$cover-image)')
+	}
+}
+
+```
 
 # Introduction {-}
 
