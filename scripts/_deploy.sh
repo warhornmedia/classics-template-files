@@ -2,6 +2,8 @@
 
 set -e
 
+echo "deploy starts running"
+
 [ -z "${GITHUB_PAT}" ] && exit 0
 [ "${TRAVIS_BRANCH}" != "master" ] && exit 0
 
