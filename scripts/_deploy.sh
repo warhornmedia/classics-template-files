@@ -2,12 +2,8 @@
 
 set -e
 
-echo "deploy starts running"
-
-[ -z "${GITHUB_PAT}" ] && exit 0
-[ "${TRAVIS_BRANCH}" != "master" ] && exit 0
-
-echo "made it to line 10"
+[ -z "${GITHUB_PAT}" ] 
+[ "${TRAVIS_BRANCH}" != "master" ] 
 
 git config --global user.email "jtbayly@gmail.com"
 git config --global user.name "Joseph Bayly"
