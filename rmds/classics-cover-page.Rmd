@@ -39,7 +39,3 @@ if (!((is.null(coverStr)) || (coverStr == ""))) {
 }
 
 ```
-
-# Introduction {-}
-
-Nobody gets the Church like Bannerman, and this treatise on the Sacraments is mandatory reading today.
