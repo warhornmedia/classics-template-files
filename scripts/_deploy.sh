@@ -2,8 +2,8 @@
 
 set -e
 
-[ -z "${GITHUB_PAT}" ] 
-[ "${TRAVIS_BRANCH}" != "master" ] 
+[ -z "${GITHUB_PAT}" ] && exit 0
+[ "${TRAVIS_BRANCH}" != "master" ] && exit 0
 
 git config --global user.email "jtbayly@gmail.com"
 git config --global user.name "Joseph Bayly"
