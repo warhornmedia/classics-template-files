@@ -5,11 +5,8 @@ pandoc_version: 2.10.1
 before_script:
   - Rscript -e "download.file(url='https://github.com/warhornmedia/classics-template-files/archive/master.zip', destfile = 'classics-template-files.zip')"
   - Rscript -e "unzip(zipfile = 'classics-template-files.zip', overwrite = TRUE)"
-  - ls
   - Rscript -e "file.rename('classics-template-files-master', 'classics-template-files')"
-  - ls
   - mv classics-template-files/scripts/*.sh .
-  - chmod +x ./_build.sh
   - chmod +x ./_build.sh
   - chmod +x ./_deploy.sh
 
