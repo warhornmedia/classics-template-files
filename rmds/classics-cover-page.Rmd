@@ -1,19 +1,21 @@
 # [A Warhorn Classics Book](https://classics.warhornmedia.com/) {-}
 
-<center>
-![](classics-template-files/images/whitelogo.png){ width=50% }
+```{r, echo=FALSE, fig.align='center', out.width='50%'}
+knitr::include_graphics("classics-template-files/images/whitelogo.png")
+```
 
-Republished by Warhorn Classics: 
+::: {.center}
+Republished by Warhorn Classics
+:::
 
 Making classic Christian books available for free online in high quality, readable formats. 
-</center>
 
 The latest version of this book can always be found [here](`r rmarkdown::metadata$url`) in every format we offer. 
 
 #### Downloads {-}
-<a href="`r rmarkdown::metadata$url`/Bannerman-Sacraments.pdf"><i class="fa fa-file-pdf-o" aria-hidden="true"></i> Download PDF</a>
+<i class="fa fa-file-pdf-o" aria-hidden="true"></i> [Download PDF](`r rmarkdown::metadata$url`/`r bookdown:::book_filename()`.pdf)
 
-<a href="`r rmarkdown::metadata$url`/Bannerman-Sacraments.epub"><i class="fa fa-book" aria-hidden="true"></i> Download ePub</a>
+<i class="fa fa-book" aria-hidden="true"></i> [Download ePub](`r rmarkdown::metadata$url`/`r bookdown:::book_filename()`.epub)
 
 We hope this book is a blessing to you. If it is, please [make a one-time or recurring contribution](https://warhornmedia.com/give) right now, sponsor a book from our upcoming list, or volunteer your proofreading or technical skills to help produce more content. Contact [Lucas Weeks](mailto:lucas@beggarsborn.com) to get involved.
 
@@ -39,7 +41,3 @@ if (!((is.null(coverStr)) || (coverStr == ""))) {
 }
 
 ```
-
-# Introduction {-}
-
-Nobody gets the Church like Bannerman, and this treatise on the Sacraments is mandatory reading today.
