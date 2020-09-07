@@ -1,7 +1,7 @@
 # [A Warhorn Classics Book](https://classics.warhornmedia.com/) {-}
 
 ```{r, echo=FALSE, fig.align='center', out.width='50%'}
-knitr::include_graphics("classics-template-files/images/whitelogo.png")
+knitr::include_graphics("../images/whitelogo.png")
 ```
 
 ::: {.center}
