@@ -3,6 +3,7 @@
 ```{r, echo=FALSE, fig.align='center', out.width='50%'}
 knitr::include_graphics(normalizePath("../images/whitelogo.png"))
 ```
+
 ::: {.center}
 Republished by Warhorn Classics
 :::
