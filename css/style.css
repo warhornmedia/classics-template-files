@@ -6,7 +6,17 @@ html {
 
 body {
 	font-family: calluna-sans, sans-serif;
+	letter-spacing: .0125em;
 }
+
+/*
+COLOR PALETTE
+#1aa9ab - Warhorn Turquoise
+#
+*/
+
+
+/*---------FONTS---------------*/
 
 .book.font-family-0 {
 	font-family: calluna, serif;
@@ -24,6 +34,8 @@ body {
   	font-feature-settings: "liga", "clig";
 }
 
+/*GREEK*/
+
 .book.font-family-0 span:lang(el) {
 	font-family: minion-3, serif;
 }
@@ -32,8 +44,10 @@ body {
 	font-family: minion-3, sans-serif;
 }
 
-/*LOGO IMAGES FOR COLOR THEMES
-------------------------------------------*/
+/*-----------------------*/
+
+
+/*---------LOGO IMAGES------------------*/
 
 .book .book-summary .summary li a img {
 	background-image: url("../images/whitelogo.png");
@@ -109,7 +123,6 @@ body {
 	line-height: 1em;
 }
 
-
 .book .book-summary ul.summary li.chapter ul li.chapter ul li.chapter {
 	font-style: italic;
 }
@@ -171,7 +184,7 @@ li.chapter b {
 }
 
 /* SEPIA */
-.book.color-theme-1 .book-body .page-wrapper .page-inner section.normal a, .book.color-theme-2 .book-body .page-wrapper .page-inner section.normal a {
+.book.color-theme-1 .book-body .page-wrapper .page-inner section.normal a {
 	color: darkred;
 }
 
@@ -215,7 +228,7 @@ h1, h2 {
 
 h1 {
 	font-family: calluna, serif;
-	border-bottom: 2px solid #1aa9ab;
+	border-bottom: .1em solid #1aa9ab;
 	line-height: 1em;
 	padding-bottom: .5em;
 	font-weight: 400;
