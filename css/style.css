@@ -437,16 +437,16 @@ pre code {
 	color: #bcc1d2;
 }
 
-.color-theme-2 ~ .rtTooltip div.rtTooltipHeader {
+.color-theme-2 ~ .rtTooltip .rtTooltipHeader {
 	background: #3f5061;
 	color: #f4f4f5;
 }
 
-.color-theme-2 ~ .rtTooltip div.rtTooltipSocial {
+.color-theme-2 ~ .rtTooltip .rtTooltipSocial {
     background: transparent;
 }
 
-.rtTooltip .rtTooltipSocialIcon {
+.color-theme-2 ~ .rtTooltip .rtTooltipSocialIcon {
 	filter: invert(1);
 }
 
