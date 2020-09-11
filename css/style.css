@@ -220,6 +220,10 @@ h3 .header-section-number {
 	font-style: italic;
 }
 
+.book .book-summary ul.summary li.chapter b {
+	font-style: normal;
+}
+
 /*--- ALTERNATE BODY TEXT OPTIONS ---*/
 
 /* HYPHENS
@@ -394,11 +398,7 @@ pre code {
 	max-width: 90%;
 }
 
-.rtTooltipHeader {
-	font-family: calluna, serif;
-}
-
-.rtTooltipBody, .rtTooltipFooter, .rtTooltipFooter a {
+.rtTooltipHeader, .rtTooltipBody, .rtTooltipFooter, .rtTooltipFooter a {
 	font-family: inherit;
 }
 
