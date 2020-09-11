@@ -403,7 +403,7 @@ pre code {
 }
 
 .rtLight .rtTooltipBrandLink a:hover {
-	color: inherit;
+	color: #ccc;
 	text-decoration: underline;
 }
 
@@ -428,11 +428,6 @@ pre code {
 }
 */
 
-.color-theme-1 ~ .rtTooltip div.rtTooltipHeader {
-/*	background: #;*/
-	color: inherit;
-}
-
 .color-theme-1 ~ .rtLight .rtTooltipMoreLink:link, .color-theme-1 ~ .rtLight .rtTooltipMoreLink:visited {
 	color: darkred;
 }
@@ -445,7 +440,11 @@ pre code {
 
 .color-theme-2 ~ .rtTooltip div.rtTooltipHeader {
 	background: #3f5061;
-	color: inherit;
+	color: #f4f4f5;
+}
+
+.color-theme-2 ~ .rtTooltip div.rtTooltipSocial {
+    background: transparent;
 }
 
 /*------*/
