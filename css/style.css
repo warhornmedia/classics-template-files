@@ -9,14 +9,42 @@ body {
 	letter-spacing: .0125em;
 }
 
-/*
-COLOR PALETTE
+/* Reduce text column width */
+.book .book-body .page-wrapper .page-inner {
+	max-width: 700px;
+}
+
+
+/*--- COLOR PALETTE ---
+
+GLOBAL
 #1aa9ab - Warhorn Turquoise
-#
-*/
+
+WHITE THEME
+#333 - White Theme Text
+#fff - White Theme Background
+#364149 - White Theme Menu Text
+#e7e7e7 - White Theme Footnote Rule
+
+SEPIA THEME
+#704214 - Sepia Text
+#877f6a - Sepia Menu Text
+#afa790 - Sepia Footnote Rule
+#f3eacb - Sepia Background
+darkred - Sepia Borders and Links
+
+NIGHT THEME
+#bdcadb - Night Text
+#fffffa - Night Brighter Text
+#c1c6d7 - Night Menu Text
+#f4f4f5 - Night Brighter Menu Text
+#1c1f2b - Night Background
+#3f5061 - Night Borders (Warhorn Darker Blue)
+
+------*/
 
 
-/*---------FONTS---------------*/
+/*--- BODY FONTS ---*/
 
 .book.font-family-0 {
 	font-family: calluna, serif;
@@ -34,7 +62,32 @@ COLOR PALETTE
   	font-feature-settings: "liga", "clig";
 }
 
-/*GREEK*/
+/* opening line style */
+h1 + p::first-line, h2 + p::first-line {
+	/*all small caps workaround*/
+	text-transform: lowercase;
+	font-variant: small-caps;
+	letter-spacing:.05em;
+	/* actual opentype all small caps code (does not work on ::first-line because of lack of support; overflow problem)
+	font-variant-caps: all-small-caps;
+	-moz-font-feature-settings: "smcp";
+	-webkit-font-feature-settings: "smcp";
+	font-feature-settings: "smcp";*/
+}
+
+/* avoid initial oldstyle numeral */
+.section p + p::first-letter {
+        font-variant-numeric: lining-nums;
+        -moz-font-feature-settings: "lnum";
+        -webkit-font-feature-settings: "lnum";
+        font-feature-settings: "lnum";
+}
+
+.smallcaps {
+	font-variant:small-caps;
+}
+
+/* GREEK */
 
 .book.font-family-0 span:lang(el) {
 	font-family: minion-3, serif;
@@ -44,192 +97,16 @@ COLOR PALETTE
 	font-family: minion-3, sans-serif;
 }
 
-/*-----------------------*/
-
-
-/*---------LOGO IMAGES------------------*/
-
-.book .book-summary .summary li a img {
-	background-image: url("../images/whitelogo.png");
-	background-size: contain;
-}
-
-.book.color-theme-1 .summary li a img {
-	background-image: url("../images/sepialogo.png");
-	background-size: contain;
-}
-
-.book.color-theme-2 .summary li a img {
-	background-image: url("../images/nightlogo.png");
-	background-size: contain;
-}
-
-/*WHITE*/
-
-.book .book-body {
-
-}
-
-/*if you change normal color theme colors above, then set alternate themes below*/
-
-/*SEPIA*/
-
-.book.color-theme-1 .book-body {
-	/*background:*/
-	/*color:*/
-}
-
-.book.color-theme-1 .book-body .page-wrapper .page-inner section.normal hr {
-	background-color: #afa790;
-}
-
-.book.color-theme-1 .book-body .page-wrapper .page-inner section.normal h1, .book.color-theme-1 .book-body .page-wrapper .page-inner section.normal h2 {
-	border-color: darkred;
-}
-
-/*NIGHT*/
-
-.book.color-theme-2 .book-body {
-/*	background:*/
-/*	color:*/
-}
-
-.book.color-theme-2 .book-body .page-wrapper .page-inner section.normal h3, .book.color-theme-2 .book-body .page-wrapper .page-inner section.normal h4, .book.color-theme-2 .book-body .page-wrapper .page-inner section.normal h5, .book.color-theme-2 .book-body .page-wrapper .page-inner section.normal h6 {
-	color: inherit;
-}
-
-.book.color-theme-2 .book-body .page-wrapper .page-inner section.normal h1, .book.color-theme-2 .book-body .page-wrapper .page-inner section.normal h2 {
-	border-color: #3f5061;
-}
-
-/*set header and TOC to calluna sans*/
-.book .book-header h1 {
-	font-family: calluna, serif;
-	font-weight: 300;
-	font-style: normal;
-	border: none;
-	padding-bottom: 0;
-	text-transform: lowercase;
-	font-variant: small-caps;
-	letter-spacing: .1em;
-}
-
-.book .book-header, .book .book-summary {
-	font-family: calluna-sans, sans-serif;
-}
-
-.book .book-summary {
-	font-size: 16px;
-	line-height: 1em;
-}
-
-.book .book-summary ul.summary li.chapter ul li.chapter ul li.chapter {
-	font-style: italic;
-}
-
-/*HYPHENS
-.book .book-body .page-wrapper .page-inner section.normal p {
-	orphans: 2;
-	widows: 2;
-	-webkit-hyphens: auto;
-    -webkit-hyphenate-limit-before: 3;
-    -webkit-hyphenate-limit-after: 4;
-    -webkit-hyphenate-limit-chars: 6 3 4;
-    -webkit-hyphenate-limit-lines: 2;
-    -webkit-hyphenate-limit-last: always;
-    -webkit-hyphenate-limit-zone: 8%;
-    -moz-hyphens: auto;
-    -moz-hyphenate-limit-chars: 6 3 4;
-    -moz-hyphenate-limit-lines: 2;
-    -moz-hyphenate-limit-last: always;
-    -moz-hyphenate-limit-zone: 8%;
-    -ms-hyphens: auto;
-    -ms-hyphenate-limit-chars: 6 3 4;
-    -ms-hyphenate-limit-lines: 2;
-    -ms-hyphenate-limit-last: always;
-    -ms-hyphenate-limit-zone: 8%;
-    hyphens: auto;
-    hyphenate-limit-chars: 6 3 4;
-    hyphenate-limit-lines: 2;
-    hyphenate-limit-last: always;
-    hyphenate-limit-zone: 8%;
-}*/
-
-/* MAIN PARAGRAPH TEXT INDENTS
--------------------------------------------*/
-/*p + p, h3 + p {
-  text-indent: 1.2em;
-}*/
-
-/*set paragraphs to no space between and indented first lines
-.book .book-body .page-wrapper .page-inner section.normal p {
-	margin-top: 0em;
-	margin-bottom: 0em;
-}*/
-/*----------------------------------------*/
-
-li.chapter b {
-	font-style: normal;
-}
-
-.book .book-summary ul.summary li a:hover, .book .book-summary ul.summary li.active>a {
-	color: #1aa9ab;
-	/*font-weight: 600;*/
-}
-
-/* LINK COLORS
-------------------------------------*/
-.book .book-body .page-wrapper .page-inner section.normal a, .book.color-theme-2 .book-body .page-wrapper .page-inner section.normal a {
-	color: #1aa9ab;
-}
-
-/* SEPIA */
-.book.color-theme-1 .book-body .page-wrapper .page-inner section.normal a {
-	color: darkred;
-}
-
-.section p + p::first-letter {
-        font-variant-numeric: lining-nums;
-        -moz-font-feature-settings: "lnum";
-        -webkit-font-feature-settings: "lnum";
-        font-feature-settings: "lnum";
-}
-
-h1 + p::first-line, h2 + p::first-line {
-	/*all small caps workaround*/
-	text-transform: lowercase;
-	font-variant: small-caps;
-	letter-spacing:.05em;
-	/* actual opentype all small caps code
-	font-variant-caps: all-small-caps;
-	-moz-font-feature-settings: "smcp";
-	-webkit-font-feature-settings: "smcp";
-	font-feature-settings: "smcp";*/
-}
-
-p.caption {
-  color: #777;
-  margin-top: 10px;
-}
-p code {
-  white-space: inherit;
-}
-pre {
-  word-break: normal;
-  word-wrap: normal;
-}
-pre code {
-  white-space: inherit;
-}
+/* HEADING STYLES */
 
 h1, h2 {
-	text-wrap: balanced;
+	text-wrap: balanced; /*doesn't seem to actually be supported*/
 }
 
 h1 {
 	font-family: calluna, serif;
 	border-bottom: .1em solid #1aa9ab;
-	line-height: 1em;
+	line-height: 1;
 	padding-bottom: .5em;
 	font-weight: 400;
 	/*all small caps*/
@@ -243,7 +120,7 @@ h1 {
 	font-feature-settings: "smcp";*/
 }
 
-h1 > .header-section-number {
+h1 .header-section-number {
 	display: block;
 	font-size: .67em;
 	padding-right: 0em;
@@ -271,12 +148,14 @@ h2 {
 	font-size: 1em;
 }
 
-h2 > .header-section-number {
+h2 .header-section-number {
 	display: block;
 	font-weight: 400;
+	font-variant: small-caps;
+	text-transform: lowercase;
 	padding-right: 0em;
 	margin-top: 2em;
-	letter-spacing: .2px;
+	width: 75%;
 	/*all small caps
   	text-transform: lowercase;
   	font-variant: small-caps;
@@ -288,7 +167,7 @@ h2 > .header-section-number {
     font-feature-settings: "smcp";*/
 }
 
-h2 > .header-section-number::before {
+h2 .header-section-number::before {
 	content: "Section ";
 }
 
@@ -297,38 +176,159 @@ h3 {
   font-weight: 400;
 }
 
-h3 > em {
+h3 em, h3 i {
 	font-style: normal;
 }
 
 .book .book-body .page-wrapper .page-inner section.normal h3 {
 	font-size: 1em;
-	/*margin-bottom: 0;*/
 }
 
-h3 > .header-section-number {
+h3 .header-section-number {
   font-style: normal;
   font-weight: 700;
 }
 
-.smallcaps {
-	font-variant:small-caps;
+/* HEADER & TOC */
+.book .book-header h1 {
+	font-family: calluna, serif;
+	font-style: normal;
+	border: none;
+	padding-bottom: 0;
+	text-transform: lowercase;
+	font-variant: small-caps;
+	letter-spacing: .1em;
 }
 
-/* Rule separating subheads; issue: also puts rule directly between h2 and h3—could probably be solved by proper use of descendant selectors...
-.book .book-body .page-wrapper .page-inner section.normal h3::before {
-  content: "—";
-    color: #3f5061;
-    font-weight: 900;
-    display: block;
-    text-align: center;
-    transform: scale(4,1);
-    margin-bottom:1em;
+.book .book-header, .book .book-summary {
+	font-family: calluna-sans, sans-serif;
 }
-*/
 
-/*FOOTNOTES
----------------------------*/
+.book .book-summary {
+	font-size: 16px;
+	line-height: 1em;
+}
+
+.book .book-summary ul.summary li a:hover, .book .book-summary ul.summary li.active > a {
+	color: #1aa9ab;
+}
+
+.book .book-summary ul.summary li.chapter ul li.chapter ul li.chapter {
+	font-style: italic;
+}
+
+/*--- ALTERNATE BODY TEXT OPTIONS ---*/
+
+/* HYPHENS
+.book .book-body .page-wrapper .page-inner section.normal p {
+	orphans: 2;
+	widows: 2;
+	-webkit-hyphens: auto;
+    -webkit-hyphenate-limit-before: 3;
+    -webkit-hyphenate-limit-after: 4;
+    -webkit-hyphenate-limit-chars: 6 3 4;
+    -webkit-hyphenate-limit-lines: 2;
+    -webkit-hyphenate-limit-last: always;
+    -webkit-hyphenate-limit-zone: 8%;
+    -moz-hyphens: auto;
+    -moz-hyphenate-limit-chars: 6 3 4;
+    -moz-hyphenate-limit-lines: 2;
+    -moz-hyphenate-limit-last: always;
+    -moz-hyphenate-limit-zone: 8%;
+    -ms-hyphens: auto;
+    -ms-hyphenate-limit-chars: 6 3 4;
+    -ms-hyphenate-limit-lines: 2;
+    -ms-hyphenate-limit-last: always;
+    -ms-hyphenate-limit-zone: 8%;
+    hyphens: auto;
+    hyphenate-limit-chars: 6 3 4;
+    hyphenate-limit-lines: 2;
+    hyphenate-limit-last: always;
+    hyphenate-limit-zone: 8%;
+}*/
+
+/* SET PARAGRAPHS TO INDENTED AND NO SPACE BETWEEN
+
+p + p, h3 + p {
+  text-indent: 1.2em;
+}
+
+.book .book-body .page-wrapper .page-inner section.normal p {
+	margin-top: 0em;
+	margin-bottom: 0em;
+}
+
+/*------*/
+
+
+/*--- COLOR THEME CUSTOMIZATION ---*/
+
+/* LOGO IMAGES */
+
+.book .book-summary .summary li a img {
+	background-image: url("../images/whitelogo.png");
+	background-size: contain;
+}
+
+.book.color-theme-1 .summary li a img {
+	background-image: url("../images/sepialogo.png");
+	background-size: contain;
+}
+
+.book.color-theme-2 .summary li a img {
+	background-image: url("../images/nightlogo.png");
+	background-size: contain;
+}
+
+/* WHITE THEME (no class) */
+
+.book .book-body .page-wrapper .page-inner section.normal a, .book.color-theme-2 .book-body .page-wrapper .page-inner section.normal a {
+	color: #1aa9ab;
+}
+
+/* SEPIA THEME ("color-theme-1") */
+
+.book.color-theme-1 .book-body .page-wrapper .page-inner section.normal a {
+	color: darkred;
+}
+
+.book.color-theme-1 .book-body .page-wrapper .page-inner section.normal h1, .book.color-theme-1 .book-body .page-wrapper .page-inner section.normal h2 {
+	border-color: darkred;
+}
+
+.book.color-theme-1 .book-body .page-wrapper .page-inner section.normal hr {
+	background-color: #afa790;
+}
+
+/* NIGHT THEME ("color-theme-2") */
+
+.book.color-theme-2 .book-body .page-wrapper .page-inner section.normal h3, .book.color-theme-2 .book-body .page-wrapper .page-inner section.normal h4, .book.color-theme-2 .book-body .page-wrapper .page-inner section.normal h5, .book.color-theme-2 .book-body .page-wrapper .page-inner section.normal h6 {
+	color: inherit;
+}
+
+.book.color-theme-2 .book-body .page-wrapper .page-inner section.normal h1, .book.color-theme-2 .book-body .page-wrapper .page-inner section.normal h2 {
+	border-color: #3f5061;
+}
+
+/*------*/
+
+p.caption {
+  color: #777;
+  margin-top: 10px;
+}
+p code {
+  white-space: inherit;
+}
+pre {
+  word-break: normal;
+  word-wrap: normal;
+}
+pre code {
+  white-space: inherit;
+}
+
+
+/*--- FOOTNOTES ---*/
 
 .book .book-body .page-wrapper .page-inner section.normal .footnotes ol, .book .book-body .page-wrapper .page-inner section.normal .footnotes ul {
     padding: 0 0 0 0em;
@@ -383,3 +383,26 @@ h3 > .header-section-number {
   }
 
 /* end Restart footnote numbers for each section. */
+
+
+/*--- RefTagger Customization ---*/
+
+.rtTooltipHeader {
+	font-family: calluna, serif;
+}
+
+.rtTooltipBody, .rtTooltipFooter {
+	font-family: inherit;
+}
+
+.rtTooltip, .rtTooltip a, .rtTooltipBody p, .rtTooltipBody span {
+	letter-spacing: .0125em;
+}
+
+/* trying to customize RefTagger to night mode */
+.color-theme-2 ~ .rtTooltip div {
+	background: black;
+	color: white;
+}
+
+/*------*/
