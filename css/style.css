@@ -37,6 +37,8 @@ NIGHT THEME
 #bdcadb - Night Text
 #fffffa - Night Brighter Text
 #c1c6d7 - Night Menu Text
+#bcc1d2 - Night Menu Base Text (seems to be overridden)
+#2d3143 - Night Menu Background
 #f4f4f5 - Night Brighter Menu Text
 #1c1f2b - Night Background
 #3f5061 - Night Borders (Warhorn Darker Blue)
@@ -391,18 +393,54 @@ pre code {
 	font-family: calluna, serif;
 }
 
-.rtTooltipBody, .rtTooltipFooter {
+.rtTooltipBody, .rtTooltipFooter, .rtTooltipFooter a {
 	font-family: inherit;
+}
+
+.rtLight .rtTooltipBrandLink a:hover {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.rtLight .rtTooltipMoreLink:link, .rtLight .rtTooltipMoreLink:visited {
+	color: #1aa9ab;
+}
+
+.rtLight .rtTooltipMoreLink:hover {
+	color: inherit;
+	text-decoration: underline;
 }
 
 .rtTooltip, .rtTooltip a, .rtTooltipBody p, .rtTooltipBody span {
 	letter-spacing: .0125em;
 }
 
-/* trying to customize RefTagger to night mode */
+/* SEPIA MODE */
+/*
+.color-theme-1 ~ .rtTooltip div {
+	background: #;
+	color: #;
+}
+*/
+
+.color-theme-1 ~ .rtTooltip div.rtTooltipHeader {
+/*	background: #;*/
+	color: inherit;
+}
+
+.color-theme-1 ~ .rtLight .rtTooltipMoreLink:link, .color-theme-1 ~ .rtLight .rtTooltipMoreLink:visited {
+	color: darkred;
+}
+
+/* NIGHT MODE */
 .color-theme-2 ~ .rtTooltip div {
-	background: black;
-	color: white;
+	background: #2d3143;
+	color: #bcc1d2;
+}
+
+.color-theme-2 ~ .rtTooltip div.rtTooltipHeader {
+	background: #3f5061;
+	color: inherit;
 }
 
 /*------*/
