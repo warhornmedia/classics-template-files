@@ -126,6 +126,7 @@ h1 .header-section-number {
 	display: block;
 	font-size: .67em;
 	padding-right: 0em;
+	width: 75%;
 }
 
 h2 {
