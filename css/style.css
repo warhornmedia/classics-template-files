@@ -412,7 +412,6 @@ pre code {
 }
 
 .rtLight .rtTooltipMoreLink:hover {
-	color: inherit;
 	text-decoration: underline;
 }
 
@@ -445,6 +444,10 @@ pre code {
 
 .color-theme-2 ~ .rtTooltip div.rtTooltipSocial {
     background: transparent;
+}
+
+.rtTooltip .rtTooltipSocialIcon {
+	filter: invert(1);
 }
 
 /*------*/
