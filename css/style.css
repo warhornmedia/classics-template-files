@@ -389,6 +389,10 @@ pre code {
 
 /*--- RefTagger Customization ---*/
 
+.rtTooltip {
+	max-width: 90%;
+}
+
 .rtTooltipHeader {
 	font-family: calluna, serif;
 }
