@@ -192,6 +192,11 @@ h3 .header-section-number {
   font-weight: 700;
 }
 
+.book .book-body .page-wrapper .page-inner section.normal h4 {
+    font-size: 1em;
+    font-weight: 400;
+}
+
 /* HEADER & TOC */
 .book .book-header h1 {
 	font-family: calluna, serif;
@@ -226,7 +231,7 @@ h3 .header-section-number {
 
 /*--- ALTERNATE BODY TEXT OPTIONS ---*/
 
-/* HYPHENS
+/*HYPHENS*/
 .book .book-body .page-wrapper .page-inner section.normal p {
 	orphans: 2;
 	widows: 2;
@@ -252,7 +257,7 @@ h3 .header-section-number {
     hyphenate-limit-lines: 2;
     hyphenate-limit-last: always;
     hyphenate-limit-zone: 8%;
-}*/
+}
 
 /* SET PARAGRAPHS TO INDENTED AND NO SPACE BETWEEN
 
