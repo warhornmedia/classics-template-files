@@ -10,3 +10,10 @@
  	 	 s.parentNode.insertBefore(g, s); 
  	 }(document, 'script')); 
 </script>
+
+<!-- Fix for split_by: rmd putting footnotes in wrong place sometimes -->
+<script>
+   $(document).ready(function () {
+      $(".footnotes").detach().appendTo('#section-');
+   });
+</script>
