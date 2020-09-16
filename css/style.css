@@ -208,9 +208,12 @@ h3 .header-section-number {
 .book .book-body .page-wrapper .page-inner section.normal h4::before {
     content: "\25B8";
     font-style: normal;
+    float: left;
     display: inline-block;
     width: 15px;
     text-align: center;
+    position: relative;
+    left: -15px;
 }
 */
 
