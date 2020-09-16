@@ -14,12 +14,12 @@ body {
 	max-width: 700px;
 }
 
-/* increase text column padding */
+/* increase text column padding: for possibly expanding outer margin for typographical marking elements
 .book .book-body .page-wrapper .page-inner section {
     padding-left: 30px;
     padding-right: 30px;
 }
-
+*/
 
 /*--- COLOR PALETTE ---
 
@@ -198,6 +198,7 @@ h3 .header-section-number {
   font-weight: 700;
 }
 
+/* for subsubpoints if using h4; problem: does not correctly style first-letters as lining-nums
 .book .book-body .page-wrapper .page-inner section.normal h4 {
     font-size: 1em;
     font-weight: 400;
@@ -211,6 +212,7 @@ h3 .header-section-number {
     width: 15px;
     text-align: center;
 }
+*/
 
 /* HEADER & TOC */
 .book .book-header h1 {
@@ -246,7 +248,7 @@ h3 .header-section-number {
 
 /*--- ALTERNATE BODY TEXT OPTIONS ---*/
 
-/*HYPHENS*/
+/*HYPHENS
 .book .book-body .page-wrapper .page-inner section.normal p {
 	orphans: 2;
 	widows: 2;
@@ -272,7 +274,7 @@ h3 .header-section-number {
     hyphenate-limit-lines: 2;
     hyphenate-limit-last: always;
     hyphenate-limit-zone: 8%;
-}
+}*/
 
 /* SET PARAGRAPHS TO INDENTED AND NO SPACE BETWEEN
 
