@@ -14,11 +14,11 @@ body {
 	max-width: 700px;
 }
 
-/* increase text column padding: for possibly expanding outer margin for typographical marking elements */
+/* increase text column padding: for possibly expanding outer margin for typographical marking elements
 .book .book-body .page-wrapper .page-inner section {
     padding-left: 30px;
     padding-right: 30px;
-}
+}*/
 
 /*--- COLOR PALETTE ---
 
@@ -197,10 +197,10 @@ h3 .header-section-number {
   font-weight: 700;
 }
 
-/* for subsubpoints if using h4; problem: does not correctly style first-letters as lining-nums */
+/* for subsubpoints if using h4; problem: does not correctly style first-letters as lining-nums 
 .book .book-body .page-wrapper .page-inner section.normal h4 {
-    font-size: 1em; /*set h4 to body text size*/
-    font-weight: 400; /*set h4 to body text weight*/
+    font-size: 1em; /*set h4 to body text size
+    font-weight: 400; /*set h4 to body text weight
     text-indent: -15px;
 }
 
@@ -214,6 +214,7 @@ h3 .header-section-number {
     position: relative;
     left: -15px;
 }
+*/
 
 /* HEADER & TOC */
 .book .book-header h1 {
