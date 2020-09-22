@@ -1,16 +1,31 @@
-# [A Warhorn Classics Book](https://classics.warhornmedia.com/) {-}
+``` {r echo=FALSE, results='asis'}
+coverStr <- rmarkdown::metadata$'cover-image'
+
+if (!((is.null(coverStr)) || (coverStr == ""))) {
+	wd <- getwd()
+	setwd("..")
+	setwd("..")
+	if (file.exists(coverStr)) {
+		cat("# Cover {-} \n![](", coverStr, ")")
+	}
+	setwd(wd)
+}
+```
+
+
+# About this book {-}
 
 ```{r, echo=FALSE, fig.align='center', out.width='50%'}
 knitr::include_graphics(normalizePath("../images/whitelogo.png"))
 ```
 
 ::: {.center}
-Republished by Warhorn Classics
+Republished by [Warhorn Classics](https://classics.warhornmedia.com/)
 :::
 
-Making classic Christian books available for free online in high quality, readable formats. 
+Making classic Christian content available for free online in high quality, readable formats. 
 
-The latest version of this book can always be found [here](`r rmarkdown::metadata$url`) in every format we offer. 
+The latest version of this book can always be found [here](`r rmarkdown::metadata$url`) in many electronic formats for your reading convenience on any device.
 
 #### Downloads {-}
 <i class="fa fa-file-pdf-o" aria-hidden="true"></i> [Download PDF](`r rmarkdown::metadata$url`/`r bookdown:::book_filename()`.pdf)
@@ -23,21 +38,16 @@ God bless,
 
 —The Warhorn Team
 
+
+#### Recent updates to this book {-}
+
+``` {r echo=FALSE, results='asis'}
+cmd = "git for-each-ref --sort='*authordate' --format='%(taggerdate:short) | %(tag) | %(contents)' refs/tags"
+cat(system(cmd,intern=TRUE))
+```
+
 ``` {r echo=FALSE, results='asis'}
 if (!((is.null(params$scans)) || (params$scans == ""))) {
-	cat('Scanned images of the original printing of this book are available [here](', params$scans, ').\n\n')
+	cat('#### Original {-} \n\nScanned images of the original printing of this book are available [here](', params$scans, ').\n')
 }
-
-coverStr <- rmarkdown::metadata$'cover-image'
-
-if (!((is.null(coverStr)) || (coverStr == ""))) {
-	wd <- getwd()
-	setwd("..")
-	setwd("..")
-	if (file.exists(coverStr)) {
-		cat("#### Cover {-} \n![](", coverStr, ")")
-	}
-	setwd(wd)
-}
-
 ```
