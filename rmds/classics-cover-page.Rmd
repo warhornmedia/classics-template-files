@@ -41,7 +41,7 @@ God bless,
 
 ``` {r echo=FALSE, results='asis'}
 cmd0 = "git fetch --all --tags"
-cmd = "git tag -l --format='%(taggerdate:short) | %(tag) | %(contents)'"
+cmd = "git tag -l --sort=-*creatordate --format='%(*creatordate:short) | %(tag) | %(contents)'"
 system(cmd0,intern=FALSE)
 updates = system(cmd,intern=TRUE)
 if (!((is.null(updates)) || (updates == ""))) {
