@@ -2,8 +2,6 @@
 
 set -ev
 
-git tag -l --format='%(taggerdate:short) | %(tag) | %(contents)' >&2
-
 Rscript -e "bookdown::render_book('index.Rmd', 'bookdown::gitbook')"
 Rscript -e "bookdown::render_book('index.Rmd', 'bookdown::pdf_book')"
 
