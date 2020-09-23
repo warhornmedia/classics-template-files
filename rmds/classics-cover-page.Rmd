@@ -42,8 +42,10 @@ God bless,
 #### Latest updates to this book {-}
 
 ``` {r echo=FALSE, results='asis'}
-cmd = "git for-each-ref --sort='*authordate' --format='%(taggerdate:short) | %(tag) | %(contents)' refs/tags"
+cmd = "git tag -l --format='%(taggerdate:short) | %(tag) | %(contents)'"
+cmd2 = ">&2 git tag -l --format='%(taggerdate:short) | %(tag) | %(contents)'"
 cat(system(cmd,intern=TRUE))
+system(cmd2,intern=TRUE)
 ```
 
 ``` {r echo=FALSE, results='asis'}
