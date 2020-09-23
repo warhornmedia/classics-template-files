@@ -39,11 +39,10 @@ God bless,
 —The Warhorn Team
 
 
-
 ``` {r echo=FALSE, results='asis'}
-cmd0 = ">&2 git fetch --all --tags"
+cmd0 = "git fetch --all --tags"
 cmd = "git tag -l --format='%(taggerdate:short) | %(tag) | %(contents)'"
-system(cmd0,intern=TRUE)
+system(cmd0,intern=FALSE)
 updates = system(cmd,intern=TRUE)
 if (!((is.null(updates)) || (updates == ""))) {
     cat('#### Latest updates to this book {-} \n\n', updates, '\n')
