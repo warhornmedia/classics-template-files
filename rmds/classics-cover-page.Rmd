@@ -39,7 +39,7 @@ God bless,
 —The Warhorn Team
 
 
-#### Recent updates to this book {-}
+#### Latest updates to this book {-}
 
 ``` {r echo=FALSE, results='asis'}
 cmd = "git for-each-ref --sort='*authordate' --format='%(taggerdate:short) | %(tag) | %(contents)' refs/tags"
