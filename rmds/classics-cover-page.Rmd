@@ -44,7 +44,7 @@ cmd0 = "git fetch --all --tags"
 cmd1 = "git tag -l --sort=-*creatordate --format='%(*creatordate:short) | %(tag) | %(contents)'"
 system(cmd0,intern=FALSE)
 updates = system(cmd1,intern=TRUE)
-if (!((is.null(updates)) || (updates == ""))) {
+if (length(updates) != 0) {
     cat('#### Latest updates to this book {-}', updates, sep='\n\n')
 }
 ```
