@@ -1,14 +1,12 @@
-``` {r echo=FALSE, results='asis'}
+<!--- Include the cover (if it exists), but only in the HTML version of the book -->
+``` {r echo=FALSE, results='asis', eval = knitr::is_html_output(excludes = "epub")}
 coverStr <- rmarkdown::metadata$'cover-image'
-
 if (!((is.null(coverStr)) || (coverStr == ""))) {
-	wd <- getwd()
-	setwd("..")
-	setwd("..")
+	coverStr = paste("../../", coverStr,sep="")
 	if (file.exists(coverStr)) {
-		cat("# Cover {-} \n![](", coverStr, ")")
+		cat("# Cover {-} \n")
+		knitr::include_graphics(normalizePath(coverStr))
 	}
-	setwd(wd)
 }
 ```
 
@@ -54,3 +52,6 @@ if (!((is.null(params$scans)) || (params$scans == ""))) {
 	cat('#### Original {-} \n\nScanned images of the original printing of this book are available [here](', params$scans, ').\n')
 }
 ```
+
+\clearpage
+\setcounter{page}{1}\pagenumbering{arabic}
