@@ -3,7 +3,7 @@ cache: packages
 pandoc_version: 2.10.1
 
 before_script:
-  - Rscript -e "git clone https://github.com/warhornmedia/classics-template-files"
+  - Rscript -e "git clone 'https://github.com/warhornmedia/classics-template-files'"
   - mv classics-template-files/scripts/*.sh .
   - chmod +x ./_build.sh
   - chmod +x ./_deploy.sh
