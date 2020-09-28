@@ -1,5 +1,5 @@
 <!--- Include the cover (if it exists), but only in the HTML version of the book -->
-``` {r echo=FALSE, results='asis', eval = knitr::is_html_output(excludes = "epub")}
+``` {r echo=FALSE, results='asis', eval = knitr::is_html_output(excludes = "epub"), fig.align='center', out.width='75%'}
 coverStr <- rmarkdown::metadata$'cover-image'
 if (!((is.null(coverStr)) || (coverStr == ""))) {
 	coverStr = paste("../../", coverStr,sep="")
