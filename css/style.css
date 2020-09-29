@@ -367,7 +367,7 @@ pre code {
     text-indent: -1.5em;
 }
 
-.footnotes p + p {
+.footnotes li p + p {
     text-indent: 0;
 }
 
