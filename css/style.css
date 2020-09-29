@@ -364,11 +364,10 @@ pre code {
 .book .book-body .page-wrapper .page-inner section.normal .footnotes ol, .book .book-body .page-wrapper .page-inner section.normal .footnotes ul {
     padding: 0 0 0 0em;
     margin:0 0 .85em 1.5em;
-    text-indent: -1.5em;
 }
 
-.footnotes li p + p {
-    text-indent: 0;
+.footnotes li p:first-child {
+    text-indent: -1.5em;
 }
 
  /* Restart footnote numbers for each section. Following trail of solution to request asked here: https://community.rstudio.com/t/restart-footnote-numbering-in-each-chaptering/75628/4
