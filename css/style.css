@@ -367,12 +367,15 @@ pre code {
     text-indent: -1.5em;
 }
 
+.footnotes p + p {
+    text-indent: 0;
+}
+
  /* Restart footnote numbers for each section. Following trail of solution to request asked here: https://community.rstudio.com/t/restart-footnote-numbering-in-each-chaptering/75628/4
 */
 
   /* don't show the wrong footnote calls */
-  .footnote-ref sup,
-  .footnoteRef sup {
+  .footnote-ref sup, .footnoteRef sup {
     display: none;
   }
 
@@ -381,14 +384,12 @@ pre code {
     counter-reset: fn-call;
   }
 
-  .footnote-ref,
-  .footnoteRef {
+  .footnote-ref, .footnoteRef {
     counter-increment: fn-call;
   }
 
   /* generate new footnote calls */
-  .footnote-ref::after,
-  .footnoteRef::after {
+  .footnote-ref::after, .footnoteRef::after {
     content: counter(fn-call);
     position: relative;
     top: -.5em;
@@ -407,7 +408,7 @@ pre code {
     counter-increment: fn-number;
   }
 
-  .footnotes p::before {
+  .footnotes li p:first-child::before {
  	content: counter(fn-number) '. ';
 	width: 1.5em;
 	float: left;
