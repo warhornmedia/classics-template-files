@@ -415,6 +415,10 @@ pre code {
 
 /* end Restart footnote numbers for each section. */
 
+/* always apply roman, i.e., not italic, to footnote refs in text */
+.footnote-ref {
+    font-style: normal;
+}
 
 /*--- RefTagger Customization ---*/
 
