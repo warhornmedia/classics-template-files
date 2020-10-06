@@ -134,6 +134,56 @@ h1 .header-section-number {
 	width: 75%;
 }
 
+#header h1.title {
+/*     border: none; */
+    text-transform: none;
+    font-size: 5rem;
+    letter-spacing: .03em;
+    margin-bottom: .4em;
+/*     padding-bottom: 0; */
+}
+
+#header p.author, #header p.date {
+    display: inline;
+    text-transform: lowercase;
+    font-variant: small-caps;
+    font-style: normal;
+    font-size: 3rem;
+    letter-spacing: .05em;
+/*     margin-bottom: 0; */
+/*     padding-bottom: 0; */
+}
+
+#header p.author {
+    margin-left: .3em;
+    padding-right: 2em;
+}
+
+#header p.date {
+    
+}
+
+#header p.date:before {
+    content: "[";
+}
+
+#header p.date:after {
+    content: "]";
+}
+
+#header p em {
+    font-style: normal;
+}
+
+#about-this-book h1 {
+    font-weight: 700;
+    letter-spacing: .01em;
+    text-transform: none;
+    font-variant: normal;
+    font-size: 1.2em;
+    border: none;
+}
+
 h2 {
 	font-weight: 700;
 	line-height: 1.5em;

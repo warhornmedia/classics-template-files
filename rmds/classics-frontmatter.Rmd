@@ -1,25 +1,12 @@
-<!--- Include the cover (if it exists), but only in the HTML version of the book -->
-``` {r echo=FALSE, results='asis', eval = knitr::is_html_output(excludes = "epub"), fig.align='center', out.width='75%'}
-coverStr <- rmarkdown::metadata$'cover-image'
-if (!((is.null(coverStr)) || (coverStr == ""))) {
-	coverStr = paste("../../", coverStr,sep="")
-	if (file.exists(coverStr)) {
-		cat("# Cover {-} \n")
-		knitr::include_graphics(normalizePath(coverStr))
-	}
-}
-```
-
-
 # About this book {-}
-
+<!--- Warhorn Classics Logo ------
 ```{r, echo=FALSE, fig.align='center', out.width='50%'}
-knitr::include_graphics(normalizePath("../images/whitelogo.png"))
+knitr::include_graphics(normalizePath("../images/whitelogo-blackletter.png"))
 ```
+-->
 
-::: {.center}
 Republished by [Warhorn Classics](https://classics.warhornmedia.com/)
-:::
+
 
 Making classic Christian content available for free online in high quality, readable formats. 
 
@@ -50,6 +37,18 @@ if (length(updates) != 0) {
 ``` {r echo=FALSE, results='asis'}
 if (!((is.null(params$scans)) || (params$scans == ""))) {
 	cat('#### Original {-} \n\nScanned images of the original printing of this book are available [here](', params$scans, ').\n')
+}
+```
+
+<!--- Include the cover (if it exists), but only in the HTML version of the book -->
+``` {r echo=FALSE, results='asis', eval = knitr::is_html_output(excludes = "epub"), fig.align='center', out.width='75%'}
+coverStr <- rmarkdown::metadata$'cover-image'
+if (!((is.null(coverStr)) || (coverStr == ""))) {
+	coverStr = paste("../../", coverStr,sep="")
+	if (file.exists(coverStr)) {
+		cat("# Cover {-} \n")
+		knitr::include_graphics(normalizePath(coverStr))
+	}
 }
 ```
 
