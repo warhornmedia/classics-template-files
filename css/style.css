@@ -134,33 +134,38 @@ h1 .header-section-number {
 	width: 75%;
 }
 
+div#header {
+    width: 100vw;
+    position: relative;
+    left: calc(-50vw + 50%);
+    background: #877f6a;
+}
+
+section#section-.normal {
+    overflow: visible;
+}
+
 #header h1.title {
-/*     border: none; */
+    max-width: 670px;
+    margin: 0 auto;
+    padding: 1em 0 .4em .5em;
+    color: #f3eacb;
+    border-color: rgba(243, 234, 203, 10%);
     text-transform: none;
     font-size: 5rem;
     letter-spacing: .03em;
-    margin-bottom: .4em;
-/*     padding-bottom: 0; */
 }
 
 #header p.author, #header p.date {
-    display: inline;
     text-transform: lowercase;
     font-variant: small-caps;
     font-style: normal;
     font-size: 3rem;
     letter-spacing: .05em;
-/*     margin-bottom: 0; */
-/*     padding-bottom: 0; */
-}
-
-#header p.author {
-    margin-left: .3em;
-    padding-right: 2em;
-}
-
-#header p.date {
-    
+    text-align: right;
+    color: #f3eacb;
+    max-width: 670px;
+    margin: auto;
 }
 
 #header p.date:before {
