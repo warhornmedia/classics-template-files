@@ -154,6 +154,8 @@ section#section-.normal {
 #header h1.title, #header p.author, #header p.date, #header h2.subtitle { /* white/generic header text specs */
     font-family: calluna, serif;
     color: #fff;
+    position: relative;
+    top: -25px;
     margin: auto;
     max-width: 670px;
     text-shadow: 4px 4px 10px rgba(0, 0, 0, 10%);
@@ -169,23 +171,23 @@ section#section-.normal {
 
 #header h1.title { /* generic title text specs */
     padding: calc(1em + 25px) 0 0 .5em;
-    position: relative;
-    top: -25px;
     border: none;
     text-transform: none;
     font-size: 4rem;
     letter-spacing: .03em;
 }
 
-#header h2.subtitle em:first-child { /* remove generic italics from subtitle, but leave inline specified italics */
+#header h2.subtitle > em { /* remove generic italics from subtitle, but leave inline specified italics */
     font-style: normal;
 }
 
 #header h2.subtitle {
     font-size: 2rem;
-    padding-left: 1.4em;
+    border: none;
+    padding-left: 1.2em;
     letter-spacing: inherit;
     margin-top: .5em;
+    margin-bottom: .5em;
 }
 
 #header p em { /* remove italics from header content */
