@@ -145,10 +145,10 @@ section#section-.normal {
 
 .color-theme-2 #header { /* night title header */
     background-image: url("../images/title-background-night.png");
-    background-color: #2d3143;
-    -moz-box-shadow: inset 0 0 10px 10px #2d3143;
-    -webkit-box-shadow: inset 0 0 10px 10px #2d3143;
-    box-shadow: inset 0 0 10px 10px #2d3143;
+    background-color: #c1c6d7;
+    -moz-box-shadow: inset 0 0 10px rgba(45, 49, 67, 40%);
+    -webkit-box-shadow: inset 0 0 10px rgba(45, 49, 67, 40%);
+    box-shadow: inset 0 0 10px rgba(45, 49, 67, 40%);
 }
 
 #header h1.title, #header p.author, #header p.date, #header h2.subtitle { /* white/generic header text specs */
