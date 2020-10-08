@@ -156,7 +156,7 @@ section#section-.normal {
 }
 
 .color-theme-2 #header h1.title, .color-theme-2 #header p.author, .color-theme-2 #header p.date { /* night title & author text specs */
-    color: 2d3143;
+    color: #2d3143;
     border-color: rgba(45, 49, 67, 30%);
 }
 
