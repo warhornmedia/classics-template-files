@@ -120,6 +120,7 @@ section#section-.normal {
 }
 
 #header { /* white/generic title header specs */
+    font-family: calluna, serif;
     width: 100vw;
     position: relative;
     left: calc(-50vw + 50%);
@@ -163,7 +164,7 @@ section#section-.normal {
 
 #header h1.title { /* generic title text specs */
     margin: 0 auto;
-    padding: 1em 0 .4em .5em;
+    padding: calc(1em + 25px) 0 .4em .5em;
     text-transform: none;
     font-size: 5rem;
     letter-spacing: .03em;
@@ -186,6 +187,7 @@ section#section-.normal {
 }
 
 #about-this-book h1 {
+    font-family: inherit;
     font-weight: 700;
     letter-spacing: .01em;
     text-transform: none;
