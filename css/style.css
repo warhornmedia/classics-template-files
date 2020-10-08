@@ -86,6 +86,7 @@ h1 + p::first-line, h2 + p::first-line {
 #header ~ div h1 + p::first-line {
     font-variant: normal;
     text-transform: none;
+    letter-spacing: inherit;
 }
 
 /* avoid initial oldstyle numeral */
