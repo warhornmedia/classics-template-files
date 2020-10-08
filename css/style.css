@@ -150,12 +150,12 @@ section#section-.normal {
     max-width: 670px;
 }
 
-.color-theme-1 #header h1.title, #header p.author, #header p.date { /* sepia title & author text specs */
+.color-theme-1 #header h1.title, .color-theme-1 #header p.author, .color-theme-1 #header p.date { /* sepia title & author text specs */
     color: #f3eacb;
     border-color: rgba(243, 234, 203, 10%);
 }
 
-.color-theme-2 #header h1.title, #header p.author, #header p.date { /* night title & author text specs */
+.color-theme-2 #header h1.title, .color-theme-2 #header p.author, .color-theme-2 #header p.date { /* night title & author text specs */
     color: fffffa;
     border-color: rgba(255, 255, 250, 25%);
 }
@@ -168,7 +168,7 @@ section#section-.normal {
     letter-spacing: .03em;
 }
 
-#header p.author, #header p.date {
+#header p.author, #header p.date { /* generic author & date text specs */
     text-transform: lowercase;
     font-variant: small-caps;
     font-style: normal;
