@@ -5,6 +5,10 @@ knitr::include_graphics(normalizePath("../images/whitelogo-blackletter.png"))
 ```
 -->
 
+Originally published in 
+
+Originally published as _______
+
 Republished by [Warhorn Classics](https://classics.warhornmedia.com/)
 
 

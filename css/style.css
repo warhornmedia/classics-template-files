@@ -112,6 +112,88 @@ h1 + p::first-line, h2 + p::first-line {
 
 /* HEADING STYLES */
 
+/*FRONT MATTER HEADINGS*/
+
+section#section-.normal {
+    overflow: visible;
+}
+
+#header { /* white/generic title header specs */
+    width: 100vw;
+    position: relative;
+    left: calc(-50vw + 50%);
+    background-image: url("../images/title-background-white.png");
+    background-color: #1aa9ab;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+.color-theme-1 #header { /* sepia title header */
+    background-image: url("../images/title-background-sepia.png");
+    background-color: #877f6a;
+}
+
+.color-theme-2 #header { /* night title header */
+    background-image: url("../images/title-background-night.png");
+    background-color: #2d3143;
+}
+
+#header h1.title, #header p.author, #header p.date { /* white/generic title & author text specs */
+    color: #fff;
+    border-color: rgba(243, 234, 203, 10%);
+    max-width: 670px;
+}
+
+.color-theme-1 #header h1.title, #header p.author, #header p.date { /* sepia title & author text specs */
+    color: #f3eacb;
+}
+
+.color-theme-2 #header h1.title, #header p.author, #header p.date { /* night title & author text specs */
+    color: fffffa;
+}
+
+#header h1.title { /* generic title text specs */
+    margin: 0 auto;
+    padding: 1em 0 .4em .5em;
+    text-transform: none;
+    font-size: 5rem;
+    letter-spacing: .03em;
+}
+
+#header p.author, #header p.date {
+    text-transform: lowercase;
+    font-variant: small-caps;
+    font-style: normal;
+    font-size: 3rem;
+    letter-spacing: .05em;
+    text-align: right;
+    margin: auto;
+    padding-right: .4em;
+    padding-bottom: 1.1em;
+}
+
+#header p.date {
+    display: none;
+}
+
+#header p em {
+    font-style: normal;
+}
+
+#about-this-book h1 {
+    font-weight: 700;
+    letter-spacing: .01em;
+    text-transform: none;
+    font-variant: normal;
+    font-size: 1.2em;
+    border: none;
+}
+
+/* --- */
+
+/*BOOK BODY HEADINGS*/
+
 h1, h2 {
 	text-wrap: balanced; /*doesn't seem to actually be supported*/
 }
@@ -138,59 +220,6 @@ h1 .header-section-number {
 	font-size: .67em;
 	padding-right: 0em;
 	width: 75%;
-}
-
-div#header {
-    width: 100vw;
-    position: relative;
-    left: calc(-50vw + 50%);
-    background-image: url("../images/title-background-sepia.png");
-    background-color: #877f6a;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: contain;
-}
-
-section#section-.normal {
-    overflow: visible;
-}
-
-#header h1.title {
-    max-width: 670px;
-    margin: 0 auto;
-    padding: 1em 0 .4em .5em;
-    color: #f3eacb;
-    border-color: rgba(243, 234, 203, 10%);
-    text-transform: none;
-    font-size: 5rem;
-    letter-spacing: .03em;
-}
-
-#header p.author, #header p.date {
-    text-transform: lowercase;
-    font-variant: small-caps;
-    font-style: normal;
-    font-size: 3rem;
-    letter-spacing: .05em;
-    text-align: right;
-    color: #f3eacb;
-    max-width: 670px;
-    margin: auto;
-    padding-right: .4em;
-    padding-bottom: 1.1em;
-}
-
-#header p em {
-    font-style: normal;
-}
-
-#about-this-book h1 {
-    font-weight: 700;
-    letter-spacing: .01em;
-    text-transform: none;
-    font-variant: normal;
-    font-size: 1.2em;
-    border: none;
 }
 
 h2 {
