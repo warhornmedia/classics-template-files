@@ -129,6 +129,10 @@ section#section-.normal {
     background-size: cover;
 }
 
+#header p em { /* remove italics from title header content */
+    font-style: normal;
+}
+
 .color-theme-1 #header { /* sepia title header */
     background-image: url("../images/title-background-sepia.png");
     background-color: #877f6a;
@@ -141,16 +145,18 @@ section#section-.normal {
 
 #header h1.title, #header p.author, #header p.date { /* white/generic title & author text specs */
     color: #fff;
-    border-color: rgba(243, 234, 203, 10%);
+    border-color: rgba(255, 255, 255, 25%);
     max-width: 670px;
 }
 
 .color-theme-1 #header h1.title, #header p.author, #header p.date { /* sepia title & author text specs */
     color: #f3eacb;
+    border-color: rgba(243, 234, 203, 10%);
 }
 
 .color-theme-2 #header h1.title, #header p.author, #header p.date { /* night title & author text specs */
     color: fffffa;
+    border-color: rgba(255, 255, 250, 25%);
 }
 
 #header h1.title { /* generic title text specs */
@@ -173,12 +179,8 @@ section#section-.normal {
     padding-bottom: 1.1em;
 }
 
-#header p.date {
+#header p.date { /* hide date from title header */
     display: none;
-}
-
-#header p em {
-    font-style: normal;
 }
 
 #about-this-book h1 {
