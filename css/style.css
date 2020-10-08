@@ -127,6 +127,7 @@ section#section-.normal {
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
+    overflow-x: hidden;
 }
 
 #header p em { /* remove italics from title header content */
