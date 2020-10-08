@@ -120,7 +120,6 @@ section#section-.normal {
 }
 
 #header { /* white/generic title header specs */
-    font-family: calluna, serif;
     width: 100vw;
     position: relative;
     left: calc(-50vw + 50%);
@@ -129,7 +128,11 @@ section#section-.normal {
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
+    background-attachment: fixed;
     overflow-x: hidden;
+    -moz-box-shadow: inset 0 0 10px 10px #1aa9ab;
+    -webkit-box-shadow: inset 0 0 10px 10px #1aa9ab;
+    box-shadow: inset 0 0 10px 10px #1aa9ab;
 }
 
 #header p em { /* remove italics from title header content */
@@ -139,17 +142,25 @@ section#section-.normal {
 .color-theme-1 #header { /* sepia title header */
     background-image: url("../images/title-background-sepia.png");
     background-color: #877f6a;
+    -moz-box-shadow: inset 0 0 10px 10px #877f6a;
+    -webkit-box-shadow: inset 0 0 10px 10px #877f6a;
+    box-shadow: inset 0 0 10px 10px #877f6a;
 }
 
 .color-theme-2 #header { /* night title header */
     background-image: url("../images/title-background-night.png");
     background-color: #2d3143;
+    -moz-box-shadow: inset 0 0 10px 10px #2d3143;
+    -webkit-box-shadow: inset 0 0 10px 10px #2d3143;
+    box-shadow: inset 0 0 10px 10px #2d3143;
 }
 
 #header h1.title, #header p.author, #header p.date { /* white/generic title & author text specs */
+    font-family: calluna, serif;
     color: #fff;
     border-color: rgba(255, 255, 255, 25%);
     max-width: 670px;
+    text-shadow: 4px 4px 10px rgba(0, 0, 0, 10%);
 }
 
 .color-theme-1 #header h1.title, .color-theme-1 #header p.author, .color-theme-1 #header p.date { /* sepia title & author text specs */
