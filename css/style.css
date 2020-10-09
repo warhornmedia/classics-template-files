@@ -251,6 +251,42 @@ a.anchor-section::before {
     opacity: 75%;
 }
 
+/* link to section tooltip */
+.hasAnchor a.anchor-section {
+    position: relative;
+    display: inline-block;
+}
+
+.hasAnchor a.anchor-section:after {
+    content: "link to section";
+    position: absolute;
+    visibility: hidden;
+    width: 110px;
+    font-family: calluna-sans, sans-serif;
+    letter-spacing: .0125em;
+    font-size: 14px;
+    line-height: 28px;
+    font-weight: 400;
+    background-color: #e7e7e7;
+    color: #333;
+    font-style: normal;
+    text-align: center;
+    padding: 0;
+    z-index: 1;
+    top: 20%;
+    left: 160%;
+    box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 20%);
+    opacity: 0;
+    transition: opacity .2s;
+}
+
+.hasAnchor a.anchor-section:hover:after {
+    visibility: visible;
+    transition-delay: 1s;
+    opacity: .7;
+}
+/*--*/
+
 h1, h2 {
 	text-wrap: balanced; /*doesn't seem to actually be supported*/
 }
