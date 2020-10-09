@@ -1,3 +1,7 @@
+.book.font-family-1 h1 {
+    font-family: calluna-sans, sans-serif;
+}
+
 h1 {
     font-style: italic;
     font-weight: 400;
