@@ -1,13 +1,8 @@
 #header h1.title { /* generic title text specs */
-    font-style: normal;
+    font-style: inherit;
     font-variant: small-caps;
+    line-height: 1;
 }
-
-#header p.author, #header p.date { /* generic author & date text specs */
-    text-transform: lowercase;
-    font-variant: small-caps;
-}
-
 #about-this-book h1 {
     font-style: inherit;
 }
@@ -27,7 +22,7 @@ h1 {
     letter-spacing: inherit;
 }
 
-h1 em, h1 i {
+ .book .book-body .page-wrapper .page-inner section.normal h1 em, .book .book-body .page-wrapper .page-inner section.normal h1 i {
 	font-style: normal;
 }
 

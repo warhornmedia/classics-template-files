@@ -191,8 +191,9 @@ section#section-.normal {
     margin-bottom: .5em;
 }
 
-#header p em { /* remove italics from header content */
+#header p.author em { /* remove italics from header content; replace with small caps */
     font-style: normal;
+    font-variant: small-caps;
 }
 
 #header p.author, #header p.date { /* generic author & date text specs */
@@ -367,7 +368,7 @@ h3 {
   font-weight: 400;
 }
 
-h3 em, h3 i {
+.book .book-body .page-wrapper .page-inner section.normal h3 em, .book .book-body .page-wrapper .page-inner section.normal h3 i {
 	font-style: normal;
 }
 
@@ -432,6 +433,10 @@ li.divider + li.chapter a:before {
     font-family: FontAwesome;
     font-style: normal;
     padding-right: 5px;
+}
+
+.book .book-summary ul.summary > li.chapter em {
+	font-style: normal;
 }
 
 .book .book-summary ul.summary li.chapter ul li.chapter ul li.chapter {
