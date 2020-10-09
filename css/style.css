@@ -238,6 +238,18 @@ section#section-.normal {
 
 /*BOOK BODY HEADINGS*/
 
+/* link to section link icon */
+a.anchor-section::before {
+    content: "\f0c1";
+    font-family: "Font Awesome 5 Free", sans-serif;
+}
+
+/* remove underline on link-to-section
+.hasAnchor:hover a.anchor-section {
+    text-decoration: none !important;
+}
+*/
+
 h1, h2 {
 	text-wrap: balanced; /*doesn't seem to actually be supported*/
 }
