@@ -1,3 +1,17 @@
+#header h1.title { /* generic title text specs */
+    font-style: normal;
+    font-variant: small-caps;
+}
+
+#header p.author, #header p.date { /* generic author & date text specs */
+    text-transform: lowercase;
+    font-variant: small-caps;
+}
+
+#about-this-book h1 {
+    font-style: inherit;
+}
+
 .book.font-family-1 h1 {
     font-family: calluna-sans, sans-serif;
 }
