@@ -243,6 +243,7 @@ a.anchor-section::before {
     content: "\f0c1";
     font-family: "Font Awesome 5 Free", FontAwesome, sans-serif;
     font-style: normal;
+    font-weight: 400;
 }
 
 .hasAnchor a.anchor-section:hover {
@@ -382,6 +383,17 @@ h3 .header-section-number {
 
 .book .book-summary ul.summary li a:hover, .book .book-summary ul.summary li.active > a {
 	color: #1aa9ab;
+}
+
+li.divider + li.chapter {
+    font-style: italic;
+}
+
+li.divider + li.chapter a:before {
+    content: "\f02d";
+    font-family: FontAwesome;
+    font-style: normal;
+    padding-right: 5px;
 }
 
 .book .book-summary ul.summary li.chapter ul li.chapter ul li.chapter {
