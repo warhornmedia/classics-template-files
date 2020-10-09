@@ -1,6 +1,12 @@
 h1 {
-  font-style: italic;
-  font-weight: 400;
+    font-style: italic;
+    font-weight: 400;
+    border: none;
+    line-height: inherit;
+    padding-bottom: inherit;
+    text-transform: none;
+    font-variant: normal;
+    letter-spacing: inherit;
 }
 
 h1 em, h1 i {
@@ -12,6 +18,15 @@ h1 em, h1 i {
 }
 
 h1 .header-section-number {
-  font-style: normal;
-  font-weight: 700;
+    display: initial;
+    font-size: inherit;
+    font-style: normal;
+    font-weight: 700;
+    padding-right: .5em;
+}
+
+h1 + p::first-line, h2 + p::first-line {
+    text-transform: none;
+    font-variant: normal;
+    letter-spacing: inherit;
 }
