@@ -241,14 +241,14 @@ section#section-.normal {
 /* link to section link icon */
 a.anchor-section::before {
     content: "\f0c1";
-    font-family: "Font Awesome 5 Free", sans-serif;
+    font-family: "Font Awesome 5 Free", FontAwesome, sans-serif;
+    font-style: normal;
 }
 
-/* remove underline on link-to-section
-.hasAnchor:hover a.anchor-section {
+.hasAnchor a.anchor-section:hover {
     text-decoration: none !important;
+    opacity: 75%;
 }
-*/
 
 h1, h2 {
 	text-wrap: balanced; /*doesn't seem to actually be supported*/
