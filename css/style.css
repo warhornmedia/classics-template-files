@@ -254,7 +254,7 @@ a.anchor-section::before {
 
 /* link to section tooltip */
 .hasAnchor a.anchor-section {
-    position: relative;
+    position: absolute;
     display: inline-block;
 }
 
@@ -283,11 +283,16 @@ a.anchor-section::before {
     transition: opacity .2s;
 }
 
-.hasAnchor a.anchor-section:hover:after {
+.hasAnchor a.anchor-section:hover::after {
     visibility: visible;
     transition-delay: 1s;
     opacity: .7;
 }
+
+h1.hasAnchor a.anchor-section {
+    font-size: .7em;
+}
+
 /*--*/
 
 h1, h2 {
@@ -348,10 +353,6 @@ h2 .header-section-number {
 	padding-right: 0em;
 	margin-top: 2em;
 	width: 75%;
-	/*all small caps
-  	text-transform: lowercase;
-  	font-variant: small-caps;
-	letter-spacing:.05em;*/
   	/*opentype asc
     font-variant-caps: all-small-caps;
     -moz-font-feature-settings: "smcp";
@@ -363,12 +364,12 @@ h2 .header-section-number::before {
 	content: "Section ";
 }
 
-h3 {
+h3, h4 {
   font-style: italic;
   font-weight: 400;
 }
 
-.book .book-body .page-wrapper .page-inner section.normal h3 em, .book .book-body .page-wrapper .page-inner section.normal h3 i {
+.book .book-body .page-wrapper .page-inner section.normal h3 em, .book .book-body .page-wrapper .page-inner section.normal h3 i, .book .book-body .page-wrapper .page-inner section.normal > div ~ div h1 em, .book .book-body .page-wrapper .page-inner section.normal > div ~ div h1 i {
 	font-style: normal;
 }
 
@@ -379,6 +380,34 @@ h3 {
 h3 .header-section-number {
   font-style: normal;
   font-weight: 700;
+}
+
+/* SERMON HEADINGS */
+
+.book .book-body .page-wrapper .page-inner section.normal > div ~ div h1 {
+    font-family: inherit;
+    font-size: 1em;
+    font-style: italic;
+    font-weight: 400;
+    border: none;
+    padding-bottom: inherit;
+    text-transform: none;
+    font-variant: normal;
+    letter-spacing: inherit;
+}
+
+.book .book-body .page-wrapper .page-inner section.normal > div ~ div h1 .header-section-number {
+    display: initial;
+    font-size: inherit;
+    font-style: normal;
+    font-weight: 700;
+    padding-right: .5em;
+}
+
+.book .book-body .page-wrapper .page-inner section.normal > div ~ div h1 + p::first-line, .book .book-body .page-wrapper .page-inner section.normal > div ~ div h2 + p::first-line {
+    text-transform: none;
+    font-variant: normal;
+    letter-spacing: inherit;
 }
 
 /* for subsubpoints if using h4; problem: does not correctly style first-letters as lining-nums 

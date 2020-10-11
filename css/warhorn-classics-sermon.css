@@ -1,4 +1,7 @@
-#header h1.title { /* generic title text specs */
+/* use if we need a separate stylesheet for sermons 
+
+
+#header h1.title {  generic title text specs 
     font-style: inherit;
     font-variant: small-caps;
     line-height: 1;
@@ -43,3 +46,6 @@ h1 + p::first-line, h2 + p::first-line {
     font-variant: normal;
     letter-spacing: inherit;
 }
+
+
+*/
