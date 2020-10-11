@@ -227,6 +227,7 @@ section#section-.normal {
 
 #about-this-book h1 {
     font-family: inherit;
+    font-style: normal;
     font-weight: 700;
     letter-spacing: .01em;
     text-transform: none;
@@ -365,7 +366,7 @@ h2 .header-section-number::before {
 	content: "Section ";
 }
 
-h3, h4 {
+h3 {
   font-style: italic;
   font-weight: 400;
 }
