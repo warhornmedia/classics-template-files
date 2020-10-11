@@ -291,6 +291,7 @@ a.anchor-section::before {
 
 h1.hasAnchor a.anchor-section {
     font-size: .7em;
+    transform: translateY(.4em);
 }
 
 /*--*/
@@ -387,6 +388,7 @@ h3 .header-section-number {
 .book .book-body .page-wrapper .page-inner section.normal > div ~ div h1 {
     font-family: inherit;
     font-size: 1em;
+    line-height: inherit;
     font-style: italic;
     font-weight: 400;
     border: none;
