@@ -11,9 +11,10 @@
  	 }(document, 'script')); 
 </script>
 
-<!-- Fix for split_by: rmd putting footnotes in wrong place sometimes -->
+<!-- Fix for "split_by: rmd" putting footnotes and arrows in wrong place sometimes -->
 <script>
    $(document).ready(function () {
       $(".footnotes").detach().appendTo('#section-');
+      $(".navigation-prev").detach().appendTo('.book-body');
    });
 </script>
