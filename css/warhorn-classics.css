@@ -295,6 +295,11 @@ h1.hasAnchor a.anchor-section {
     transform: translateY(.4em);
 }
 
+.book .book-body .page-wrapper .page-inner section.normal > div ~ div h1.hasAnchor a.anchor-section, #about-this-book h1 {
+    font-size: inherit;
+    transform: none;
+}
+
 /*--*/
 
 h1, h2 {
