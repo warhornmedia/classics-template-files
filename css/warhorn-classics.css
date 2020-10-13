@@ -417,6 +417,16 @@ h3 .header-section-number {
     padding-right: .5em;
 }
 
+.editorial::before {
+    content: "[";
+    font-style: normal;
+}
+
+.editorial::after {
+    content: "]";
+    font-style: normal;
+}
+
 .book .book-body .page-wrapper .page-inner section.normal > div ~ div h1 + p::first-line, .book .book-body .page-wrapper .page-inner section.normal > div ~ div h2 + p::first-line {
     text-transform: none;
     font-variant: normal;
