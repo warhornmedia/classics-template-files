@@ -476,6 +476,10 @@ h3 .header-section-number {
 	color: #1aa9ab;
 }
 
+.book .book-summary ul.summary li a span, .book.color-theme-1 .book-summary ul.summary li a, .book.color-theme-1 .book-summary ul.summary li span, .book.color-theme-2 .book-summary ul.summary li a, .book.color-theme-2 .book-summary ul.summary li span {
+    color: inherit;
+}
+
 li.divider + li.chapter {
     font-style: italic;
 }
