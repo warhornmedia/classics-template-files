@@ -19,3 +19,10 @@
       $(".navigation-next").detach().appendTo('.book-body');
    });
 </script>
+
+<!-- en dashes never break -->
+<script>
+    $("h1, h2, h3, h4, h5, h6, p, li, blockquote").html(function(_, html) {
+    return  html.replace(/(–.)/g, '<span class="nobreak">$1</span>')
+});
+</script>
