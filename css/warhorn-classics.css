@@ -702,6 +702,10 @@ pre code {
 	letter-spacing: .0125em;
 }
 
+.rtBibleRef {
+    white-space: nowrap;
+}
+
 /* SEPIA MODE */
 /*
 .color-theme-1 ~ .rtTooltip div {
