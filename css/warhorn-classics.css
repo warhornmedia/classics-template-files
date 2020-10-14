@@ -734,3 +734,7 @@ pre code {
 }
 
 /*------*/
+
+.nobreak {
+    white-space: nowrap;
+}
