@@ -9,8 +9,7 @@ before_script:
   - chmod +x ./_deploy.sh
 
 #  - sudo apt install calibre # install calibre to support mobi file creation
-  - Rscript -e "install.packages('bookdown')" #installs latest version of bookdown. 
-#  - Rscript -e "remotes::install_github('rstudio/bookdown', upgrade = TRUE)" # Installs dev version of bookdown?. Should be unnecessary most of the time.
+#  - Rscript -e "install.packages('bookdown')" #installs the latest *released* version of bookdown. By default we actually use the latest dev version as specified in DESCRIPTION.
 
 script:
   - ./_build.sh
