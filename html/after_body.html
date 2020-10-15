@@ -20,15 +20,14 @@
    });
 </script>
 
-<!-- make it so en dashes never break, ORIGINAL script using .nobreak CSS span 
+<!-- make it so en dashes never break, ORIGINAL script using .nobreak CSS span -->
 <script>
-    $(window).load(function() {
+    $(document).ready(function() {
         $("body").html(function(_, html) {
             return  html.replace(/(–.)(?![^<^>]+>)/g, '<span class="nobreak">$1</span>')
         });
     });
 </script>
--->
 
 <!-- en dash script using HTML word-joiner entity --
 <script>
