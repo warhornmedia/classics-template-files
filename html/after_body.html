@@ -23,8 +23,8 @@
 <!-- make it so en dashes never break -->
 <script>
     $(window).load(function() {
-        $("body").html(function(_, html) {
-        return  html.replace(/(–.)/g, '<span class="nobreak">$1</span>')
+        $("h2").html(function(_, html) {
+            return  html.replace(/(–.)(?!\d*")/g, '<span class="smallcaps">$1</span>')
         });
     });
 </script>
