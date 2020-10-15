@@ -21,7 +21,7 @@
 </script>
 
 <script>
-    $(window).load(function() {
+    $(window).bind("load", function() {
         $("section.normal").html(function(_, html) {
             return  html.replace(/(Præstat)/g, '<span class="nobreak">$1</span>')
         });
