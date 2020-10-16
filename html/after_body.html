@@ -20,7 +20,7 @@
    });
 </script>
 
-<!-- make it so en dashes never break, ORIGINAL script using .nobreak CSS span::: problem: breaks popup functionality of refTagger, even though the RegEx avoids messing with any refTagger refs; problem is with the script targeting any element which includes the refTagger, even if the RegEx avoids doing anything to the refTagger link HTML itself. It does not seem possible to use selectors to select everything but avoid selecting <a> tags with class "rtBibleRef". Problem is that if you select the <p> which has the link in it, you can't avoid selecting the <a> inside it. Script doesn't break reftagger if it is loaded on document.ready. Solution seems to be to find a way to use document.ready and somehow avoid Scripture ref en dashes. Maybe borrow reftagger's bible book regex, but that seems hopeless, esp. since I don't believe there's general browser support for negative lookbehind RegEx...
+<!--- make it so en dashes never break, ORIGINAL script using .nobreak CSS span::: problem: breaks popup functionality of refTagger, even though the RegEx avoids messing with any refTagger refs; problem is with the script targeting any element which includes the refTagger, even if the RegEx avoids doing anything to the refTagger link HTML itself. It does not seem possible to use selectors to select everything but avoid selecting <a> tags with class "rtBibleRef". Problem is that if you select the <p> which has the link in it, you can't avoid selecting the <a> inside it. Script doesn't break reftagger if it is loaded on document.ready. Solution seems to be to find a way to use document.ready and somehow avoid Scripture ref en dashes. Maybe borrow reftagger's bible book regex, but that seems hopeless, esp. since I don't believe there's general browser support for negative lookbehind RegEx...
 <script>
     $(window).load(function() {
         $("section.normal").html(function(_, html) {
@@ -30,7 +30,7 @@
 </script>
 -->
 
-<!-- en dash script using HTML word-joiner entity --
+<!--- en dash script using HTML word-joiner entity --
 <script>
     $(window).load(function() {
         $("body").html(function(_, html) {
