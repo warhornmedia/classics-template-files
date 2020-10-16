@@ -5,7 +5,13 @@
 <script language="javascript" type="text/javascript">
     window.onload = function() {
         $("h3").html(function(_, html) {
-            return  html.replace(/(–.)(?!([^<^>]+>)|(\d*<\/a>))/g, '<span class="nobreak">$1</span>')
+            return  html.replace(/(Sacraments)/g, '<span class="nobreak">$1</span>')
         });
     }
 </script>
+
+<!-- current grep
+
+/(–.)(?!([^<^>]+>)|(\d*<\/a>))/g
+
+-->
