@@ -741,4 +741,7 @@ pre code {
 
 .nobreak {
     white-space: nowrap;
+    font-size:5em; /* obnoxious test attribute */
+    font-weight: 700; /* obnoxious test attribute */
+    color: cyan; /* obnoxious test attribute */
 }

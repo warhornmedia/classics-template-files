@@ -4,7 +4,7 @@
 <!-- make sure en dashes don't break -->
 <script language="javascript" type="text/javascript">
     window.onload = function() {
-        $("section.normal").html(function(_, html) {
+        $("h3").html(function(_, html) {
             return  html.replace(/(–.)(?!([^<^>]+>)|(\d*<\/a>))/g, '<span class="nobreak">$1</span>')
         });
     }
