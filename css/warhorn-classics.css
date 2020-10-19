@@ -339,8 +339,10 @@ h2 {
 	font-weight: 700;
 	line-height: 1.5em;
 	letter-spacing: .6px;
-	border-left: .15em solid #1aa9ab;
-	padding-left: .5em;
+    position: relative;
+    left: -1.2em;
+	border-left: .2em solid #1aa9ab;
+	padding-left: 1em;
 }
 
 /*sepia mode h2 rule*/
