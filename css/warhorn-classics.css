@@ -67,6 +67,12 @@ NIGHT THEME
   	font-feature-settings: "liga", "clig";
 }
 
+.poetry {
+    margin-right: 1em;
+    margin-left: 2em;
+    font-style: italic;
+}
+
 /* opening line style */
 h1 + p::first-line, h2 + p::first-line {
 	/*all small caps workaround*/
