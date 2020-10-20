@@ -7,7 +7,7 @@ knitr::include_graphics(normalizePath("../images/whitelogo-blackletter.png"))
 
 `r params$pubinfo`
 
-Republished by [Warhorn Classics](https://classics.warhornmedia.com/)—making classic Christian content available for free online in high quality, readable formats. 
+Republished by [Warhorn Classics](https://classics.warhornmedia.com/)—making classic Christian content available online for [free]{.smallcaps} in high quality, readable formats. 
 
 The latest version of this book can always be found [here](`r rmarkdown::metadata$url`) in many electronic formats for your reading convenience on any device.
 
@@ -15,13 +15,6 @@ The latest version of this book can always be found [here](`r rmarkdown::metadat
 <i class="fa fa-file-pdf-o" aria-hidden="true"></i> [Download PDF](`r rmarkdown::metadata$url`/`r bookdown:::book_filename()`.pdf)
 
 <i class="fa fa-book" aria-hidden="true"></i> [Download ePub](`r rmarkdown::metadata$url`/`r bookdown:::book_filename()`.epub)
-
-We hope this book is a blessing to you. If it is, please [make a one-time or recurring contribution](https://warhornmedia.com/give) right now, sponsor a book from our upcoming list, or volunteer your proofreading or technical skills to help produce more content. Contact [Lucas Weeks](mailto:lucas@beggarsborn.com) to get involved.
-
-God bless,
-
-—The Warhorn Team
-
 
 ``` {r echo=FALSE, results='asis'}
 cmd0 = "git fetch --all --tags"
@@ -38,6 +31,10 @@ if (!((is.null(params$scans)) || (params$scans == ""))) {
 	cat('#### Original {-} \n\nScanned images of the original printing of this book are available [here](', params$scans, ').\n')
 }
 ```
+
+#### Support Warhorn Classics {-}
+
+We hope this book is a blessing to you. If it is, please [make a one-time or recurring contribution](https://warhornmedia.com/give) right now, sponsor a book from our upcoming list, or volunteer your proofreading or technical skills to help produce more content. Contact [Lucas Weeks](mailto:lucas@beggarsborn.com) to get involved.
 
 <!--- Include the cover (if it exists), but only in the HTML version of the book
 ``` {r echo=FALSE, results='asis', eval = knitr::is_html_output(excludes = "epub"), fig.align='center', out.width='75%'}
