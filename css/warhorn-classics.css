@@ -67,9 +67,11 @@ NIGHT THEME
   	font-feature-settings: "liga", "clig";
 }
 
-.poetry {
-    margin-right: 1em;
-    margin-left: 2em;
+.book .book-body .body-inner .page-wrapper .page-inner .normal .section .poetry > p {
+    margin-right: 2em;
+    margin-left: 4em;
+    margin-bottom: 0;
+    text-indent: -2em;
     font-style: italic;
 }
 
