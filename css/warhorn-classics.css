@@ -71,18 +71,20 @@ NIGHT THEME
     list-style-type: none;
     font-style: italic;
     margin-right: 2em;
+    margin-left: 2em;
+}
+
+.poetry li p {
+    margin-bottom: 0 !important;
 }
 
 .poetry > ul > li {
-    
-}
-
-.poetry > ul > li > ul {
-
+    margin-left: 3em;
+    text-indent: -3em;
 }
 
 .poetry > ul > li > ul > li {
-
+    margin-left: -1em;
 }
 
 /* opening line style */
