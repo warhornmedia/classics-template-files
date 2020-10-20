@@ -288,8 +288,8 @@ a.anchor-section::before {
     text-align: center;
     padding: 0;
     z-index: 1;
-    top: 20%;
-    left: 160%;
+    top: 90%;
+    right: calc(-55px + 50%);
     box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 20%);
     opacity: 0;
     transition: opacity .2s;
@@ -297,7 +297,7 @@ a.anchor-section::before {
 
 .hasAnchor a.anchor-section:hover::after {
     visibility: visible;
-    transition-delay: 1s;
+    transition-delay: .5s;
     opacity: .7;
 }
 
@@ -309,6 +309,10 @@ h1.hasAnchor a.anchor-section {
 .book .book-body .page-wrapper .page-inner section.normal > div ~ div h1.hasAnchor a.anchor-section {
     font-size: inherit;
     transform: none;
+}
+
+.hasAnchor { /* keep tooltips from forcing horizontal scroll */
+    padding-right: 80px;
 }
 
 /*--*/
