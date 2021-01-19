@@ -7,6 +7,10 @@ before_script:
   - mv classics-template-files/scripts/*.sh .
   - chmod +x ./_build.sh
   - chmod +x ./_deploy.sh
+  - openssl aes-256-cbc -K $encrypted_0a6446eb3ae3_key -iv $encrypted_0a6446eb3ae3_iv -in classics-template-files/fonts/font1.zip.enc -out font1.zip -d
+  - unzip classics-template-files/fonts/font1.zip
+  - mkdir ~/.fonts
+  - cp Calluna/Calluna-Regular.otf ~/.fonts
 
 #  - sudo apt install calibre # install calibre to support mobi file creation
 #  - Rscript -e "install.packages('bookdown')" #installs the latest *released* version of bookdown. By default we actually use the latest dev version as specified in DESCRIPTION.
