@@ -16,6 +16,26 @@ The latest version of this book can always be found [here](`r rmarkdown::metadat
 
 <i class="fa fa-book" aria-hidden="true"></i> [Download ePub](`r rmarkdown::metadata$url`/`r bookdown:::book_filename()`.epub)
 
+<!--- Include link to the original source (if it's in the metadata) -->
+``` {r echo=FALSE, results='asis'}
+if (!((is.null(params$scans)) || (params$scans == ""))) {
+	cat('#### Original {-} \n\nScanned images of the original printing of this book (our authoritative source) are available [here](', params$scans, ').\n')
+}
+```
+
+<!--- Include the editorial notes (if the file exists)-->
+```{r, include=FALSE}
+editorial_notes = "../../_editorial-notes.Rmd"
+include_editorial = FALSE
+if (file.exists(editorial_notes)) {
+	include_editorial = TRUE
+	cat("success")
+}
+```
+```{r, child=if (include_editorial) '../../_editorial-notes.Rmd'}
+```
+
+<!--- Include the github tagged release notes (if any exist)-->
 ``` {r echo=FALSE, results='asis'}
 cmd0 = "git fetch --all --tags"
 cmd1 = "git tag -l --sort=-*creatordate --format='%(*creatordate:short) | %(tag) | %(contents)'"
@@ -26,17 +46,11 @@ if (length(updates) != 0) {
 }
 ```
 
-``` {r echo=FALSE, results='asis'}
-if (!((is.null(params$scans)) || (params$scans == ""))) {
-	cat('#### Original {-} \n\nScanned images of the original printing of this book are available [here](', params$scans, ').\n')
-}
-```
-
 #### Support Warhorn Classics {-}
 
 We hope this book is a blessing to you. If it is, please [make a one-time or recurring contribution](https://warhornmedia.com/give) right now, sponsor a book from our upcoming list, or volunteer your proofreading or technical skills to help produce more content. Contact [Lucas Weeks](mailto:lucas@beggarsborn.com) to get involved.
 
-<!--- Include the cover (if it exists), but only in the HTML version of the book
+<!--- (Currently not doing this) Include the cover (if it exists), but only in the HTML version of the book
 ``` {r echo=FALSE, results='asis', eval = knitr::is_html_output(excludes = "epub"), fig.align='center', out.width='75%'}
 coverStr <- rmarkdown::metadata$'cover-image'
 if (!((is.null(coverStr)) || (coverStr == ""))) {
@@ -49,5 +63,6 @@ if (!((is.null(coverStr)) || (coverStr == ""))) {
 ```
 -->
 
+<!--- These are a couple of necessary PDF fixes-->
 \clearpage
 \setcounter{page}{1}\pagenumbering{arabic}
