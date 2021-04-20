@@ -4,6 +4,7 @@ set -ev
 
 Rscript -e "bookdown::render_book('index.Rmd', 'bookdown::gitbook')"
 tlmgr option repository ctan
+tlmgr update --self
 Rscript -e "bookdown::render_book('index.Rmd', 'bookdown::pdf_book')"
 
 # Command to create *both* epub and mobi files.
