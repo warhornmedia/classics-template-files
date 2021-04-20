@@ -1,5 +1,5 @@
 # About this book {-}
-<!--- Warhorn Classics Logo 
+<!--- (Not currently including) Warhorn Classics logo 
 ```{r, echo=FALSE, fig.align='center', out.width='50%'}
 knitr::include_graphics(normalizePath("../images/whitelogo-blackletter.png"))
 ```
