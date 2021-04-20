@@ -13,5 +13,5 @@ cd book-output
 rm -r *.*
 cp -r ../_book/* ./
 git add --all *
-git commit -m"Update the book" || true
+git commit -am"Update the book" || true
 git push -q origin gh-pages
