@@ -3,7 +3,7 @@
 set -ev
 tlmgr option repository ctan
 wget http://mirror.ctan.org/systems/texlive/tlnet/update-tlmgr-latest.sh
-sudo env PATH="$PATH" ./update-tlmgr-latest.sh
+./update-tlmgr-latest.sh
 
 Rscript -e "bookdown::render_book('index.Rmd', 'bookdown::gitbook')"
 Rscript -e "bookdown::render_book('index.Rmd', 'bookdown::pdf_book')"
