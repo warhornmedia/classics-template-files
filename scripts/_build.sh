@@ -2,10 +2,6 @@
 
 set -ev
 
-tlmgr option repository ctan
-tlmgr update --self --no-verify-downloads
-tlmgr update --all --no-verify-downloads
-
 Rscript -e "bookdown::render_book('index.Rmd', 'bookdown::gitbook')"
 Rscript -e "bookdown::render_book('index.Rmd', 'bookdown::pdf_book')"
 

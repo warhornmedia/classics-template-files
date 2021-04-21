@@ -1,8 +1,10 @@
 language: r
 cache: packages
+latex: false
 pandoc_version: 2.10.1
 
 before_script:
+  - Rscript -e "tinytex::install_tinytex()"
   - git clone https://github.com/warhornmedia/classics-template-files.git
   - mv classics-template-files/scripts/*.sh .
   - chmod +x ./_build.sh
