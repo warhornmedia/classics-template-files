@@ -15,10 +15,17 @@ sudo cp -vf LiberationSerif-Italic.ttf /Library/Fonts
 Rscript -e "bookdown::render_book('index.Rmd', 'bookdown::gitbook')"
 Rscript -e "bookdown::render_book('index.Rmd', 'bookdown::pdf_book')"
 
+if [ $1 = "--includeMobi"]; then 
+  brew install --cask calibre
+  Rscript -e "epubFile <- bookdown::render_book('index.Rmd', 'bookdown::epub_book'); bookdown::calibre(epubFile, 'mobi')"
+else
+  Rscript -e "bookdown::render_book('index.Rmd', 'bookdown::epub_book')"
+fi
+
 # Command to create *both* epub and mobi files.
 # Turned off to speed up rebuilds during testing.
 # Before turning on, make sure you install Calibre first
 # Rscript -e "epubFile <- bookdown::render_book('index.Rmd', 'bookdown::epub_book'); bookdown::calibre(epubFile, 'mobi')"
 
 # Command that *only* creates epub files.
-Rscript -e "bookdown::render_book('index.Rmd', 'bookdown::epub_book')"
+#Rscript -e "bookdown::render_book('index.Rmd', 'bookdown::epub_book')"
