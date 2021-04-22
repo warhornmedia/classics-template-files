@@ -15,7 +15,7 @@ sudo cp -vf LiberationSerif-Italic.ttf /Library/Fonts
 Rscript -e "bookdown::render_book('index.Rmd', 'bookdown::gitbook')"
 Rscript -e "bookdown::render_book('index.Rmd', 'bookdown::pdf_book')"
 
-if [ $1 = "--includeMobi" ]; then 
+if [ $1 == "--includeMobi" ]; then 
   brew install --cask calibre
   Rscript -e "epubFile <- bookdown::render_book('index.Rmd', 'bookdown::epub_book'); bookdown::calibre(epubFile, 'mobi')"
 else
