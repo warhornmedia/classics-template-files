@@ -18,18 +18,18 @@ Rscript -e "bookdown::render_book('index.Rmd', 'bookdown::gitbook')"
 formats="$(grep 'download:' _output.yml)"
 
 # if PDF is in the download list
-if [[ $formats == *"PDF"* ]]; then
+if [[ $formats == *"pdf"* ]]; then
   # render PDF version
   Rscript -e "bookdown::render_book('index.Rmd', 'bookdown::pdf_book')"
 fi
 
 # if MOBI is in the download list
-if [[ $formats == *"MOBI"* ]]; then
+if [[ $formats == *"mobi"* ]]; then
   # render epub and mobi version
   brew install --cask calibre
   Rscript -e "epubFile <- bookdown::render_book('index.Rmd', 'bookdown::epub_book'); bookdown::calibre(epubFile, 'mobi')"
 # if EPUB is in the download list
-elif [[ $formats == *"EPUB"* ]]; then
+elif [[ $formats == *"epub"* ]]; then
   # render the epub
   Rscript -e "bookdown::render_book('index.Rmd', 'bookdown::epub_book')"
 fi
