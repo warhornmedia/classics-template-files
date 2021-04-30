@@ -30,7 +30,11 @@ fi
 if [[ $formats == *"mobi"* ]]; then
   # render epub and mobi version
   brew install --cask calibre
-  Rscript -e "epubFile <- bookdown::render_book('index.Rmd', 'bookdown::epub_book'); bookdown::calibre(epubFile, 'mobi')"
+  brew install --cask kindle-previewer
+  curl  https://plugins.calibre-ebook.com/272407.zip --output plugin.zip
+  calibre-customize -a plugin.zip
+  #calibre-debug -r "KFX Output" -- 
+  Rscript -e "epubFile <- bookdown::render_book('index.Rmd', 'bookdown::epub_book'); bookdown::calibre(epubFile, 'mobi'); "
 # if EPUB is in the download list
 elif [[ $formats == *"epub"* ]]; then
   # render the epub
