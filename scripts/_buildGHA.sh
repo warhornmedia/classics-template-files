@@ -29,6 +29,7 @@ fi
 # if MOBI is in the download list
 if [[ $formats == *"mobi"* ]]; then
   # render epub and mobi version
+  brew update
   brew install --cask calibre
   brew install --cask kindle-previewer
   curl  https://plugins.calibre-ebook.com/272407.zip --output plugin.zip
