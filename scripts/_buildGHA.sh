@@ -26,9 +26,8 @@ if [[ $formats == *"pdf"* ]]; then
   Rscript -e "bookdown::render_book('index.Rmd', 'bookdown::pdf_book')"
 fi
 
-# if MOBI is in the download list
-if [[ $formats == *"mobi"* ]]; then
-  # render epub and mobi version
+# if kfx is in the download list, then install pre-req's & make epub, mobi, & kfx
+if [ $formats == *"kfx"* ]]; then
   brew update
   brew install --cask calibre
   brew install --cask kindle-previewer
@@ -36,7 +35,28 @@ if [[ $formats == *"mobi"* ]]; then
   calibre-customize -a plugin.zip
   #calibre-debug -r "KFX Output" -- 
   Rscript -e "epubFile <- bookdown::render_book('index.Rmd', 'bookdown::epub_book'); bookdown::calibre(epubFile, 'mobi');" -e 'cmd0 = paste("calibre-debug -r \"KFX Output\" -- ", epubFile,sep=""); kfxFile <- system(cmd0,intern=FALSE);'
-# if EPUB is in the download list
+
+# if mobi, azw3, or kfx is in the download list, then install pre-req's & make epub, then others
+elif [[ $formats == *"mobi"* || $formats == *"azw3"* || $formats == *"kfx"* ]]; then
+  brew update
+  brew install --cask calibre
+  # create epub first
+  Rscript -e "epubFile <- bookdown::render_book('index.Rmd', 'bookdown::epub_book');"
+  
+  if [[ $formats == *"kfx"* ]];
+    brew install --cask kindle-previewer
+    curl  https://plugins.calibre-ebook.com/272407.zip --output plugin.zip
+    calibre-customize -a plugin.zip
+    Rscript -e 'cmd0 = paste("calibre-debug -r \"KFX Output\" -- ", epubFile,sep=""); kfxFile <- system(cmd0,intern=FALSE); '
+    # and now gotta move it to _book, I think?
+  fi
+  if [[ $formats == *"mobi"* ]];
+    Rscript -e "bookdown::calibre(epubFile, 'mobi')"
+  fi
+  if [[ $formats == *"azw3"* ]];
+    Rscript -e "bookdown::calibre(epubFile, 'azw3')"
+  fi
+# else if epub is in the download list & it hasn't been made yet, make it
 elif [[ $formats == *"epub"* ]]; then
   # render the epub
   Rscript -e "bookdown::render_book('index.Rmd', 'bookdown::epub_book')"
