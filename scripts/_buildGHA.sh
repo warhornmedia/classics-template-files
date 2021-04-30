@@ -35,7 +35,7 @@ if [[ $formats == *"mobi"* ]]; then
   curl  https://plugins.calibre-ebook.com/272407.zip --output plugin.zip
   calibre-customize -a plugin.zip
   #calibre-debug -r "KFX Output" -- 
-  Rscript -e "epubFile <- bookdown::render_book('index.Rmd', 'bookdown::epub_book'); bookdown::calibre(epubFile, 'mobi'); cmd0 = paste("calibre-debug -r 'KFX Output' -- ", epubFile,sep=""); kfxFile <- system(cmd0,intern=FALSE);"
+  Rscript -e "epubFile <- bookdown::render_book('index.Rmd', 'bookdown::epub_book'); bookdown::calibre(epubFile, 'mobi'); -e 'cmd0 = paste("calibre-debug -r \"KFX Output\" -- ", epubFile,sep=""); kfxFile <- system(cmd0,intern=FALSE);'
 # if EPUB is in the download list
 elif [[ $formats == *"epub"* ]]; then
   # render the epub
