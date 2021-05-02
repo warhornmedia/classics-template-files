@@ -41,10 +41,10 @@ if [[ $formats == *"mobi"* || $formats == *"azw3"* || $formats == *"kfx"* ]]; th
     # and now gotta move it to _book, I think?
   fi
   if [[ $formats == *"mobi"* ]]; then
-    Rscript -e "load(file="./.Rdata"); bookdown::calibre(epubFile, 'mobi')"
+    Rscript -e "load(file='./.Rdata'); bookdown::calibre(epubFile, 'mobi')"
   fi
   if [[ $formats == *"azw3"* ]]; then
-    Rscript -e "load(file="./.Rdata"); bookdown::calibre(epubFile, 'azw3')"
+    Rscript -e "load(file='./.Rdata'); bookdown::calibre(epubFile, 'azw3')"
   fi
 # else if epub is in the download list & it hasn't been made yet, make it
 elif [[ $formats == *"epub"* ]]; then
