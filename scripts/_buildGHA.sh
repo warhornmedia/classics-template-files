@@ -30,7 +30,7 @@ fi
 if [[ $formats == *"mobi"* || $formats == *"azw3"* || $formats == *"kfx"* ]]; then
   brew update
   brew install --cask calibre
-  # create epub first
+  # create epub first, for conversion in next steps
   Rscript --save -e "epubFile <- bookdown::render_book('index.Rmd', 'bookdown::epub_book');"
   
   if [[ $formats == *"kfx"* ]]; then
@@ -38,14 +38,17 @@ if [[ $formats == *"mobi"* || $formats == *"azw3"* || $formats == *"kfx"* ]]; th
     curl  https://plugins.calibre-ebook.com/272407.zip --output plugin.zip
     calibre-customize -a plugin.zip
     Rscript -e 'load(file="./.Rdata"); cmd0 = paste("calibre-debug -r \"KFX Output\" -- ", epubFile,sep=""); kfxFile <- system(cmd0,intern=FALSE);'
-    # and now gotta move it to _book, I think?
+    # Somehow the book is going into the right folder. (_book) Don't ask me how.
   fi
+
   if [[ $formats == *"mobi"* ]]; then
     Rscript -e "load(file='./.Rdata'); bookdown::calibre(epubFile, 'mobi')"
   fi
+
   if [[ $formats == *"azw3"* ]]; then
     Rscript -e "load(file='./.Rdata'); bookdown::calibre(epubFile, 'azw3')"
   fi
+
 # else if epub is in the download list & it hasn't been made yet, make it
 elif [[ $formats == *"epub"* ]]; then
   # render the epub
