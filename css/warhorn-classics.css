@@ -3,7 +3,7 @@ html {
 }
 
 body {
-	font-family: museo-sans, calluna-sans, sans-serif;
+	font-family: calluna-sans, sans-serif;
 	letter-spacing: .0125em;
 }
 
@@ -52,7 +52,7 @@ NIGHT THEME
 /*--- BODY FONTS ---*/
 
 .book.font-family-0 {
-	font-family: arno-pro, calluna, serif;
+	font-family: calluna, serif;
 	font-variant-ligatures: common-ligatures;
   	-moz-font-feature-settings: "liga", "clig";
   	-webkit-font-feature-settings: "liga", "clig";
@@ -60,7 +60,7 @@ NIGHT THEME
 }
 
 .book.font-family-1 {
-	font-family: museo-sans, calluna-sans, sans-serif;
+	font-family: calluna-sans, sans-serif;
 	font-variant-ligatures: common-ligatures;
   	-moz-font-feature-settings: "liga", "clig";
   	-webkit-font-feature-settings: "liga", "clig";
@@ -122,11 +122,11 @@ h1 + p::first-line, h2 + p::first-line {
 /* GREEK */
 
 .book.font-family-0 span:lang(el) {
-	font-family: arno-pro, Minion-3, serif;
+	font-family: arno-pro, serif;
 }
 
 .book.font-family-1 span:lang(el) {
-	font-family: arno-pro, Minion-3, sans-serif;
+	font-family: arno-pro, sans-serif;
 }
 
 /* HEADING STYLES */
