@@ -122,11 +122,11 @@ h1 + p::first-line, h2 + p::first-line {
 /* GREEK */
 
 .book.font-family-0 span:lang(el) {
-	font-family: Warnock-Pro, serif;
+	font-family: 'GFS Didot', serif;
 }
 
 .book.font-family-1 span:lang(el) {
-	font-family: Warnock-Pro, sans-serif;
+	font-family: 'GFS Didot', sans-serif;
 }
 
 /* HEADING STYLES */
