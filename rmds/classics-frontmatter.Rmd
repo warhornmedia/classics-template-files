@@ -7,7 +7,7 @@ knitr::include_graphics(normalizePath("../images/whitelogo-blackletter.png"))
 
 `r params$pubinfo`
 
-Republished by [Warhorn Classics](https://classics.warhornmedia.com/)—making classic Christian content available online for [free]{.smallcaps} in high quality, readable formats. 
+Republished by [Warhorn Classics](https://classics.warhornmedia.com/)—making high-quality digital editions of classic Christian content available to you for free. 
 
 The latest version of this book can always be found [here](`r rmarkdown::metadata$url`) in many electronic formats for your reading convenience on any device.
 
