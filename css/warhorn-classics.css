@@ -578,17 +578,17 @@ p + p, h3 + p {
 /* LOGO IMAGES */
 
 .book .book-summary .summary li a img {
-	background-image: url("../images/whitelogo-blackletter.png");
+	background-image: url("../images/WHC-plain-white.png");
 	background-size: contain;
 }
 
 .book.color-theme-1 .summary li a img {
-	background-image: url("../images/sepialogo-blackletter.png");
+	background-image: url("../images/WHC-plain-sepia.png");
 	background-size: contain;
 }
 
 .book.color-theme-2 .summary li a img {
-	background-image: url("../images/nightlogo-blackletter.png");
+	background-image: url("../images/WHC-plain-night.png");
 	background-size: contain;
 }
 
