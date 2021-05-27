@@ -7,6 +7,13 @@ body {
 	letter-spacing: .0125em;
 }
 
+table, tr, td {
+    border-collapse: collapse;
+    border: none;
+    border-width: 0;
+    border-color: none;
+}
+
 /* Reduce text column width */
 .book .book-body .page-wrapper .page-inner {
 	max-width: 700px;
