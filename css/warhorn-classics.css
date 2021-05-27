@@ -122,7 +122,7 @@ h1 + p::first-line, h2 + p::first-line {
 /* GREEK */
 
 .book.font-family-0 span:lang(el) {
-	font: 100%/1 Palatino, Times New Roman, serif;
+	font: 100%/1 Times New Roman, serif;
 	font: 95% Georgia;
     font: 111%/.9 arno-pro;
 }
