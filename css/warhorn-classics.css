@@ -89,10 +89,10 @@ NIGHT THEME
 
 /* opening line style */
 h1 + p::first-line, h2 + p::first-line {
-	/*all small caps workaround*/
+	/*all small caps workaround
 	text-transform: lowercase;
 	font-variant: small-caps;
-	letter-spacing:.05em;
+	letter-spacing:.05em;*/
 	/* actual opentype all small caps code (does not work on ::first-line because of lack of support; overflow problem)
 	font-variant-caps: all-small-caps;
 	-moz-font-feature-settings: "smcp";
