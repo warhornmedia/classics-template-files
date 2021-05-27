@@ -3,7 +3,7 @@ html {
 }
 
 body {
-	font-family: calluna-sans, Verdana, Helvetica, sans-serif;
+	font-family: calluna-sans, Verdana, Helvetica, Helvetica Neue, sans-serif;
 	letter-spacing: .0125em;
 }
 
@@ -60,7 +60,7 @@ NIGHT THEME
 }
 
 .book.font-family-1 {
-	font-family: calluna-sans, Verdana, Helvetica, sans-serif;
+	font-family: calluna-sans, Verdana, Helvetica, Helvetica Neue, sans-serif;
 	font-variant-ligatures: common-ligatures;
   	-moz-font-feature-settings: "liga", "clig";
   	-webkit-font-feature-settings: "liga", "clig";
@@ -123,12 +123,14 @@ h1 + p::first-line, h2 + p::first-line {
 
 .book.font-family-0 span:lang(el) {
 	font: 100%/1 Palatino, Times New Roman, serif;
-	font: 111%/.9 arno-pro;
+	font: 95% Georgia;
+    font: 111%/.9 arno-pro;
 }
 
 .book.font-family-1 span:lang(el) {
-	font: 100%/1 Verdana, Helvetica, sans-serif;
-	font: 111%/.9 arno-pro;
+	font-family: sans-serif;
+    font: 111%/.9 arno-pro;
+    font: 92% Helvetica Neue, Helvetica;
 }
 
 /* HEADING STYLES */
@@ -270,7 +272,7 @@ section#section-.normal {
 /* link to section link icon */
 a.anchor-section::before {
     content: "\f0c1";
-    font-family: "Font Awesome 5 Free", FontAwesome, Verdana, Helvetica, sans-serif;
+    font-family: "Font Awesome 5 Free", FontAwesome, Helvetica, Helvetica Neue, sans-serif;
     font-style: normal;
     font-weight: 400;
 }
@@ -291,7 +293,7 @@ a.anchor-section::before {
     position: absolute;
     visibility: hidden;
     width: 110px;
-    font-family: calluna-sans, Verdana, Helvetica, sans-serif;
+    font-family: calluna-sans, Verdana, Helvetica, Helvetica Neue, sans-serif;
     letter-spacing: .0125em;
     font-size: 14px;
     line-height: 28px;
@@ -492,7 +494,7 @@ h3 .header-section-number {
 }
 
 .book .book-header, .book .book-summary {
-	font-family: calluna-sans, Verdana, Helvetica, sans-serif;
+	font-family: calluna-sans, Verdana, Helvetica, Helvetica Neue, sans-serif;
 }
 
 .book .book-summary {
