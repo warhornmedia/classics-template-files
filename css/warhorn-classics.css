@@ -3,7 +3,7 @@ html {
 }
 
 body {
-	font-family: calluna-sans, sans-serif;
+	font-family: calluna-sans, Verdana, Helvetica, sans-serif;
 	letter-spacing: .0125em;
 }
 
@@ -52,7 +52,7 @@ NIGHT THEME
 /*--- BODY FONTS ---*/
 
 .book.font-family-0 {
-	font-family: calluna, serif;
+	font-family: calluna, Palatino, Times New Roman, serif;
 	font-variant-ligatures: common-ligatures;
   	-moz-font-feature-settings: "liga", "clig";
   	-webkit-font-feature-settings: "liga", "clig";
@@ -60,7 +60,7 @@ NIGHT THEME
 }
 
 .book.font-family-1 {
-	font-family: calluna-sans, sans-serif;
+	font-family: calluna-sans, Verdana, Helvetica, sans-serif;
 	font-variant-ligatures: common-ligatures;
   	-moz-font-feature-settings: "liga", "clig";
   	-webkit-font-feature-settings: "liga", "clig";
@@ -122,11 +122,13 @@ h1 + p::first-line, h2 + p::first-line {
 /* GREEK */
 
 .book.font-family-0 span:lang(el) {
-	font-family: arno-pro, serif;
+	font: 100%/1 Palatino, Times New Roman, serif;
+	font: 111%/.9 arno-pro;
 }
 
 .book.font-family-1 span:lang(el) {
-	font-family: arno-pro, sans-serif;
+	font: 100%/1 Verdana, Helvetica, sans-serif;
+	font: 111%/.9 arno-pro;
 }
 
 /* HEADING STYLES */
@@ -177,7 +179,7 @@ section#section-.normal {
 }
 
 #header h1.title, #header p.author, #header p.date, #header h2.subtitle { /* white/generic header text specs */
-    font-family: calluna, serif;
+    font-family: calluna, Palatino, Times New Roman, serif;
     color: #fff;
     margin: auto;
     max-width: 670px;
@@ -268,7 +270,7 @@ section#section-.normal {
 /* link to section link icon */
 a.anchor-section::before {
     content: "\f0c1";
-    font-family: "Font Awesome 5 Free", FontAwesome, sans-serif;
+    font-family: "Font Awesome 5 Free", FontAwesome, Verdana, Helvetica, sans-serif;
     font-style: normal;
     font-weight: 400;
 }
@@ -289,7 +291,7 @@ a.anchor-section::before {
     position: absolute;
     visibility: hidden;
     width: 110px;
-    font-family: calluna-sans, sans-serif;
+    font-family: calluna-sans, Verdana, Helvetica, sans-serif;
     letter-spacing: .0125em;
     font-size: 14px;
     line-height: 28px;
@@ -336,7 +338,7 @@ h1, h2 {
 }
 
 h1 {
-	font-family: calluna, serif;
+	font-family: calluna, Palatino, Times New Roman, serif;
 	border-bottom: .1em solid #1aa9ab;
 	line-height: 1;
 	padding-bottom: .5em;
@@ -480,7 +482,7 @@ h3 .header-section-number {
 
 /* HEADER & TOC */
 .book .book-header h1 {
-	font-family: calluna, serif;
+	font-family: calluna, Palatino, Times New Roman, serif;
 	font-style: normal;
 	border: none;
 	padding-bottom: 0;
@@ -490,7 +492,7 @@ h3 .header-section-number {
 }
 
 .book .book-header, .book .book-summary {
-	font-family: calluna-sans, sans-serif;
+	font-family: calluna-sans, Verdana, Helvetica, sans-serif;
 }
 
 .book .book-summary {
@@ -531,7 +533,7 @@ li.divider + li.chapter a:before {
 
 /*--- ALTERNATE BODY TEXT OPTIONS ---*/
 
-/*HYPHENS
+/*HYPHENS*/
 .book .book-body .page-wrapper .page-inner section.normal p {
 	orphans: 2;
 	widows: 2;
@@ -557,7 +559,7 @@ li.divider + li.chapter a:before {
     hyphenate-limit-lines: 2;
     hyphenate-limit-last: always;
     hyphenate-limit-zone: 8%;
-}*/
+}
 
 /* SET PARAGRAPHS TO INDENTED AND NO SPACE BETWEEN
 
