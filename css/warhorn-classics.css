@@ -775,6 +775,28 @@ pre code {
 
 /* TABLES */
 
+div.scripture-table {
+    box-sizing:border-box;
+}
+
+div.column {
+    float: left;
+    width: 33.33%;
+    padding: 10px;
+}
+
+.scripture-table:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+@media screen and (max-width: 600px) {
+    .column {
+        width: 100%;
+    }
+}
+
 table {
     border-collapse: collapse;
     border-style: none;
