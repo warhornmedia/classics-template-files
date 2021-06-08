@@ -65,6 +65,10 @@ NIGHT THEME
     padding-right: 5px;
 }
 
+.color-theme-1 #text-status ol li > strong {
+    color: darkred;
+}
+
 
 /*--- BODY FONTS ---*/
 
@@ -793,7 +797,6 @@ pre code {
 /* TABLES */
 
 div.scripture-table {
-    box-sizing:border-box;
 }
 
 div.column {
@@ -809,7 +812,7 @@ div.column {
 }
 
 @media screen and (max-width: 600px) {
-    .column {
+    div.column {
         width: 100%;
     }
 }
