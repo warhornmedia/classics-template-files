@@ -52,14 +52,14 @@ NIGHT THEME
 /*--- FRONT MATTER ---*/
 
 
-#text-status ol li strong {
+#text-status ol li > strong {
     color:#00acac;
+    text-transform:uppercase;
+    font-family: calluna-sans;
 }
 
 #text-status ol li strong:after {
-    content: "\f35a";
-    font-family: "Font Awesome 5 Free", FontAwesome, Helvetica, Helvetica Neue, sans-serif;
-    font-weight: normal;
+    content: "\2794";
     font-style: normal;
     padding-left: 5px;
     padding-right: 5px;
