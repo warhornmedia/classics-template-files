@@ -49,6 +49,21 @@ NIGHT THEME
 ------*/
 
 
+/*--- FRONT MATTER ---*/
+
+
+#text-status ol li strong {
+    color:#00acac;
+}
+
+#text-status ol li strong:after {
+    content: "\f35a";
+    font-family: "Font Awesome 5 Free", FontAwesome, Helvetica, Helvetica Neue, sans-serif;
+    font-weight: normal;
+    font-style: normal;
+}
+
+
 /*--- BODY FONTS ---*/
 
 .book.font-family-0 {
