@@ -53,9 +53,10 @@ NIGHT THEME
 
 
 #text-status ol li > strong {
-    color:#00acac;
+    color:#00a9ac;
     text-transform:uppercase;
     font-family: calluna-sans;
+    animation: currentStatus 1s infinite;
 }
 
 #text-status ol li strong:after {
@@ -63,6 +64,12 @@ NIGHT THEME
     font-style: normal;
     padding-left: 5px;
     padding-right: 5px;
+}
+
+@keyframes currentStatus {
+    0% {opacity: 1}
+    50% {opacity: .7}
+    100% {opacity:  1}
 }
 
 .color-theme-1 #text-status ol li > strong {
@@ -811,11 +818,12 @@ div.column {
     clear: both;
 }
 
+/* supposed to be responsive for screens, didn't really work on iPhone…
 @media screen and (max-width: 600px) {
     div.column {
         width: 100%;
     }
-}
+}*/
 
 table {
     border-collapse: collapse;
