@@ -7,7 +7,7 @@ knitr::include_graphics(normalizePath("../images/whitelogo-blackletter.png"))
 
 `r params$pubinfo`
 
-Republished by [Warhorn Classics](https://classics.warhornmedia.com/)—making high-quality digital editions of classic Christian content available to you for free. 
+Republished by [Warhorn Classics](https://classics.warhornmedia.com/)—making high-quality digital editions of classic Christian content available for free. 
 
 The latest version of this book can always be found [here](`r rmarkdown::metadata$url`) in many electronic formats for your reading convenience on any device.
 
@@ -19,7 +19,7 @@ The latest version of this book can always be found [here](`r rmarkdown::metadat
 <!--- Include link to the original source (if it's in the metadata) -->
 ``` {r echo=FALSE, results='asis'}
 if (!((is.null(params$scans)) || (params$scans == ""))) {
-	cat('#### Original {-} \n\nScanned images of the original printing of this book (our authoritative source) are available [here](', params$scans, ').\n')
+	cat('#### Original {-} \n\nScanned images of this book (our authoritative source) are available [here](', params$scans, '). We generally choose source texts which were published as late as possible during the author’s lifetime.\n')
 }
 ```
 
