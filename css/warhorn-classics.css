@@ -818,6 +818,19 @@ div.column {
     clear: both;
 }
 
+table.scripture-table {
+    width:100%;
+}
+
+table.scripture-table, table.scripture-table tr, table.scripture-table td {
+    border-width:0;
+    border-style:none;
+}
+
+table.scripture-table td {
+    padding:10px;
+}
+
 /* supposed to be responsive for screens, didn't really work on iPhone…
 @media screen and (max-width: 600px) {
     div.column {
