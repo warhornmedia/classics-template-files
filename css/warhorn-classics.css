@@ -823,8 +823,9 @@ table.scripture-table {
 }
 
 table.scripture-table, table.scripture-table tr, table.scripture-table td {
-    border-width:0;
-    border-style:none;
+    border-width: 0 !important;
+    border-style: none !important;
+    background-color: transparent !important;
 }
 
 table.scripture-table td {
