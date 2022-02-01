@@ -28,7 +28,8 @@ fi
 
 # if mobi, azw3, or kfx is in the download list, then install pre-req's & make epub, then others
 if [[ $formats == *"mobi"* || $formats == *"azw3"* || $formats == *"kfx"* ]]; then
-  brew update
+  # Hoping "brew update" isn't necessary anymore?
+  # brew update
   brew install --cask calibre
   # create epub first, for conversion in next steps
   Rscript --save -e "epubFile <- bookdown::render_book('index.Rmd', 'bookdown::epub_book');"
