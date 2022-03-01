@@ -28,18 +28,19 @@ fi
 
 # if mobi, azw3, or kfx is in the download list, then install pre-req's & make epub, then others
 if [[ $formats == *"mobi"* || $formats == *"azw3"* || $formats == *"kfx"* ]]; then
-  # Hoping "brew update" isn't necessary anymore?
+  # a brew update isn't necessary anymore, but there's no good way to install a particular version of calibre
   # brew update
   brew install --cask calibre
   # create epub first, for conversion in next steps
   Rscript --save -e "epubFile <- bookdown::render_book('index.Rmd', 'bookdown::epub_book');"
   
   if [[ $formats == *"kfx"* ]]; then
+  	# Once again, there's no good way to pick which version of kindle-previewer we want...
     brew install --cask kindle-previewer
     curl  https://plugins.calibre-ebook.com/272407.zip --output plugin.zip
     calibre-customize -a plugin.zip
     Rscript -e 'load(file="./.Rdata"); cmd0 = paste("calibre-debug -r \"KFX Output\" -- ", epubFile,sep=""); kfxFile <- system(cmd0,intern=FALSE);'
-    # Somehow the book is going into the right folder. (_book) Don't ask me how.
+    # Somehow the book is going into the "_book" folder, which is where we want it. Don't ask me how.
   fi
 
   if [[ $formats == *"mobi"* ]]; then
