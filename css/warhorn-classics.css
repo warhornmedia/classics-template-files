@@ -95,6 +95,10 @@ NIGHT THEME
   	font-feature-settings: "liga", "clig";
 }
 
+.center {
+	text-align: center;
+}
+
 .poetry ul {
     list-style-type: none;
     font-style: italic;
