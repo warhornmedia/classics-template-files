@@ -35,7 +35,7 @@ if (file.exists(editorial_notes)) {
 ```{r, child=if (include_editorial) '../../_editorial-notes.Rmd'}
 ```
 
-<!--- Include the github tagged release notes (if any exist)-->
+<!--- Include the github tagged release notes (if any exist)
 ``` {r echo=FALSE, results='asis'}
 cmd0 = "git fetch --all --tags"
 cmd1 = "git tag -l --sort=-*creatordate --format='%(*creatordate:short) | %(tag) | %(contents)'"
@@ -45,6 +45,7 @@ if (length(updates) != 0) {
     cat('#### Latest updates to this book {-}', updates, sep='\n\n')
 }
 ```
+-->
 
 #### Support Warhorn Classics {-}
 
