@@ -32,7 +32,7 @@
 \makeatother
 % End of default stuff from bookdown
 
-% Insert book cover first and format title page after that?
+% Insert book cover first and format title page after that
 \usepackage{titling}
 \usepackage{pdfpages}
 \IfFileExists{./cover.pdf}{
@@ -54,14 +54,14 @@
 }
 \makeatother
 
-%\clearpage\pagenumbering{roman}
-
 % poetry styling
 \newenvironment{poetry}[0]{\par\leftskip=2em\rightskip=2em}{\par\medskip}
 
 % specify fonts
+\usepackage{babel} 
 \babelfont[*Latin]{rm}{Calluna}
 \babelprovide[import]{greek}
 \babelfont[*greek]{rm}{Baskerville}
 
+%specify that what comes next is frontmatter, thus page nums are roman numerals
 \frontmatter
