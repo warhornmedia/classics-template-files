@@ -64,6 +64,5 @@ if (!((is.null(coverStr)) || (coverStr == ""))) {
 ```
 -->
 
-<!--- These are a couple of necessary PDF fixes-->
-\clearpage
-\setcounter{page}{1}\pagenumbering{arabic}
+<!--- End of frontmatter. Resets to page 1 (in Arabic rather than Roman) -->
+\mainmatter
